@@ -53,30 +53,86 @@
 <!-- END LOADER -->
 
 <!-- START HEADER -->
+<!-- START HEADER -->
+
+<!-- NAVBAR FIX -->
+<style>
+header.fixed-top {
+    position: absolute !IMPORTANT;
+}
+
+header {
+    height: auto !IMPORTANT;
+    padding: 10px 0 !IMPORTANT;
+    background-color: #4241b8 !IMPORTANT;
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.1) !IMPORTANT;
+}
+
+.navbar-nav{
+	flex-direction: row !IMPORTANT;
+	float: none !IMPORTANT;
+	border-right: 0px solid rgba(255,255,255,0.6) !IMPORTANT;
+	width: 100% !IMPORTANT;
+}
+.navbar-nav li{
+	margin-left: 2em !IMPORTANT;
+}
+
+@media only screen and (max-width: 991px){
+	.navbar-nav{
+	flex-direction: column !IMPORTANT;
+	float: none !IMPORTANT;
+}
+
+.navbar-toggler{
+	font-size: 14px !IMPORTANT;
+}
+}
+
+.team-member{
+	flex: 0 0 100% !IMPORTANT;
+    max-width: 100% !IMPORTANT;
+}
+</style>
 <header class="header_wrap fixed-top">
 	<div class="container-fluid">
-		<nav class="navbar navbar-expand-lg">
-			<a class="navbar-brand page-scroll animation" href="#home_section" data-animation="fadeInDown" data-animation-delay="1s">
+		<nav class="navbar ">
+		
+		<button class="navbar-toggler animation" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" data-animation="fadeInDown" data-animation-delay="0.5s">
+        MENU <span class="ion-android-menu"></span>
+      </button>
+	  
+			<a style="color: greenyellow; font-size: 16px;" class="navbar-brand page-scroll animation" target="_blank" rel=”noreferrer” href="https://dex.guru/token/0x463e737d8f740395abf44f7aac2d9531d8d539e9-bsc" data-animation="fadeInDown" data-animation-delay="0.5s">
       	<img class="logo_light" src="assets/images/logo.png" alt="logo" style="height:65px; margin-left:15px"/>
+		Price: <font id="price1">$0.00</font></a></li>
       </a>
-      <h5 style="color: white; font-size:2.2rem; font-weight: 200; margin-top: 5px; margin-left: 10px;">
+      <h5 style="color: white; font-size:2.2rem; font-weight: 200; margin-top: 5px;">
         Toad Network
       </h5>
-      <button class="navbar-toggler animation" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" data-animation="fadeInDown" data-animation-delay="1.1s">
-        <span class="ion-android-menu"></span>
-      </button>
-			<div class="collapse navbar-collapse" id="navbarSupportedContent" ">
-        <ul class="navbar-nav m-auto">
-          <li class="animation" data-animation="fadeInDown" data-animation-delay="1.1s"><a class="nav-link page-scroll nav_item" href="#">Home</a></li>
-          <li class="animation" data-animation="fadeInDown" data-animation-delay="1.2s"><a class="nav-link page-scroll nav_item" href="#why_choose">Pools</a></li>
-          <li class="animation" data-animation="fadeInDown" data-animation-delay="1.3s"><a class="nav-link page-scroll nav_item" href="./lpfarming.html">LP Farming</a></li>
-          <li class="animation" data-animation="fadeInDown" data-animation-delay="1.4s"><a class="nav-link page-scroll nav_item" href="https://exchange.pancakeswap.finance/#/swap?inputCurrency=0x463e737d8f740395abf44f7aac2d9531d8d539e9" target="_blank">Swap</a></li>
-          <li class="animation" data-animation="fadeInDown" data-animation-delay="1.5s"><a class="nav-link page-scroll nav_item" href="https://dex.guru/token/0x463e737d8f740395abf44f7aac2d9531d8d539e9-bsc" target="_blank">Chart</a></li>
-		  <li class="animation" data-animation="fadeInDown" data-animation-delay="1.6s"><a class="nav-link page-scroll nav_item" href="./team.html">TEAM</a></li>
-          <li class="animation" data-animation="fadeInDown" data-animation-delay="1.7s"><a class="nav-link page-scroll nav_item" href="#" style="color: greenyellow;">Price: <font id="price">$0.00</font></a></li>
+	  
+	  <div class="animation" data-animation="fadeInDown" data-animation-delay="1.2s" id="methamask_status_3">
+	  <a class="nav-link nav-btn" href="#" style="text-transform: capitalize;font-weight: 500;color: #f68b24;border-radius: 15px;box-shadow: 0 12px 18px rgb(0 0 0 / 5%);background: #fff;padding: 10px 20px;font-size: 0.8rem;">
+              Approve Metamask
+              <img src="assets/images/nav-btn-ic.png" alt="" style="
+              margin-left: 5px;
+              margin-top: -2px;">
+            </a>
+		</div>
+	  
+      
+			<div class="collapse navbar-collapse" id="navbarSupportedContent" >
+        <ul class="navbar-nav mr-auto">
+          <li class="animation" data-animation="fadeInDown" data-animation-delay="0.5s"><a class="nav-link page-scroll nav_item" href="./index">Home</a></li>
+          <li class="animation" data-animation="fadeInDown" data-animation-delay="0.6s"><a class="nav-link page-scroll nav_item" href="./index/#why_choose">Pools</a></li>
+          <li class="animation" data-animation="fadeInDown" data-animation-delay="0.7s"><a class="nav-link page-scroll nav_item" href="./lpfarming.html">LP Farming</a></li>
+          <li class="animation" data-animation="fadeInDown" data-animation-delay="0.8s"><a class="nav-link page-scroll nav_item" href="https://exchange.pancakeswap.finance/#/swap?inputCurrency=0x463e737d8f740395abf44f7aac2d9531d8d539e9" target="_blank">Swap</a></li>
+          <li class="animation" data-animation="fadeInDown" data-animation-delay="0.9s"><a class="nav-link page-scroll nav_item" href="https://dex.guru/token/0x463e737d8f740395abf44f7aac2d9531d8d539e9-bsc" target="_blank">Chart</a></li>
+		  <li class="animation" data-animation="fadeInDown" data-animation-delay="0.9s" style="opacity: 1;"><a class="nav-link page-scroll nav_item" href="https://ToadNetwork.church" target="_blank">Church</a></li>
+		  <li class="animation" data-animation="fadeInDown" data-animation-delay="1.0s"><a class="nav-link page-scroll nav_item" href="./team.html">TEAM</a></li>
+          <li class="animation" data-animation="fadeInDown" data-animation-delay="1.1s"><a class="nav-link page-scroll nav_item" target="_blank" rel=”noreferrer” href="https://dex.guru/token/0x463e737d8f740395abf44f7aac2d9531d8d539e9-bsc" style="color: greenyellow;">Price: <font id="price2">$0.00</font></a></li>
         </ul>
         <ul class="navbar-nav nav_btn align-items-center">
-          <li class="animation" data-animation="fadeInDown" data-animation-delay="2s" id="methamask_status">
+          <li class="animation" data-animation="fadeInDown" data-animation-delay="1.2s" id="methamask_status">
             <a class="nav-link nav-btn" href="#" style="text-transform: capitalize;font-weight: 500;color: #f68b24;border-radius: 15px;box-shadow: 0 12px 18px rgb(0 0 0 / 5%);background: #fff;padding: 10px 20px;font-size: 0.8rem;">
               Approve Metamask
               <img src="assets/images/nav-btn-ic.png" alt="" style="
@@ -84,7 +140,7 @@
               margin-top: -2px;">
             </a>
           </li>
-          <li class="animation" data-animation="fadeInDown" data-animation-delay="1.7s"><a class="nav-link page-scroll nav_item" href="https://t.me/toadnetwork"><i class="fab fa-telegram animation" style="font-size:30px" data-animation="fadeInDown" data-animation-delay="0.2s"></i></a></li>
+          <li class="animation" data-animation="fadeInDown" data-animation-delay="1.3s"><a class="nav-link page-scroll nav_item" href="https://t.me/toadnetwork"><i class="fab fa-telegram animation" style="font-size:30px" data-animation="fadeInDown" data-animation-delay="0.2s"></i></a></li>
         </ul>
 			</div>
 		</nav>
@@ -498,45 +554,7 @@ We believe this to be the fairest way to structure a yield farm.
   </div>
 </section>
 <!-- END SECTION TIMELINE -->
-<section id="team" style="background: white;">
-	<div class="container">
-		<div class="row">
-			<div class="col-lg-12  col-md-12 col-sm-12">
-        <div class="title_default_dark title_border text-center">
-          <h4 class="animation animated fadeInUp" data-animation="fadeInUp" data-animation-delay="0.2s" style="animation-delay: 0.2s; opacity: 1;">Our Team</h4>
-          <div class="col-lg-12  col-md-6 col-sm-6 res_md_mb_30 res_sm_mb_20">
-              <div class="bg_gray4 radius_box team_box_s3 animation animated fadeInUp" data-animation="fadeInUp" data-animation-delay="0.6s" style="animation-delay: 0.6s; opacity: 1;">
-                  <div class="text-center">
-                  	<img src="assets/images/toad_guy.png" alt="team2" style="height: 100px;">
-                  </div>
-                  <div class="team_info text-center">
-                      <h4><a href="#team2" class="content-popup">ToadGuy</a><p style="font-weight: 300;font-size: 0.9rem;margin-top: 10px;">TechnoToad</p></h4>
-                      <p class="animation animated fadeInUp" data-animation="fadeInUp" data-animation-delay="0.4s" style="animation-delay: 0.4s; opacity: 1;">"From a very young age, ToadGuy was always fascinated by shitcoins, and creating one was his childhood dream. His biggest heroes were Justin Sun and Richard Heart. In his teens, ToadGuy started to learn how to code between his fap sessions, and by the age of 32, while living in his mom's basement, he started working for crypto projects. During the 2017 ICO rush, ToadGuy eventually got rich and decided to move to Thailand. When asked about the reason why he simply responded: "Cheap hookers". But something didn't seem right for ToadGuy, he had all the ladyboys and the coke he wanted, but he still wasn't happy. Then all of a sudden it clicked to him: "he never accomplished his childhood dream!". He quickly booked an airplane ticket and traveled back to his mom's basement. During the next 2 months, he programmed non-stop, only leaving his room when his mom yelled at him. But by the end of February, he knew that he was finally going to be happy. Toad Network was finally live! Young Toad Guy looked up at the Justin Sun portrait he hanged in the wall of his bedroom when he was a child, and smiled. He knew Justin would be proud of him."</p>
-                  </div>
-              </div>
-          </div>
-        </div>
-			</div>
 
-      <div class="col-lg-12  col-md-12 col-sm-12" style="margin-top:35px">
-        <div class="title_default_dark title_border text-center">
-          <h4 class="animation animated fadeInUp" data-animation="fadeInUp" data-animation-delay="0.2s" style="animation-delay: 0.2s; opacity: 1;"></h4>
-          <div class="col-lg-12  col-md-6 col-sm-6 res_md_mb_30 res_sm_mb_20">
-              <div class="bg_gray4 radius_box team_box_s3 animation animated fadeInUp" data-animation="fadeInUp" data-animation-delay="0.6s" style="animation-delay: 0.6s; opacity: 1;">
-                  <div class="text-center">
-                  	<img src="assets/images/snake.jpg" alt="team2" style="height: 100px;border-radius: 100px;">
-                  </div>
-                  <div class="team_info text-center">
-                      <h4><a href="#team2" class="content-popup">Snake</a><p style="font-weight: 300;font-size: 0.9rem;margin-top: 10px;">Master of The Coin</p></h4>
-                      <p class="animation animated fadeInUp" data-animation="fadeInUp" data-animation-delay="0.4s" style="animation-delay: 0.4s; opacity: 1;">"Abandoned and found by squid aliens, who taught him to communicate entirely through colors and flashing which turns out to be remarkably similar to binary code. Snake was a fast learner, when he was 14 years old he was already tokenizing entire galaxies and listing them into multiple intergalactic exchanges. After waiting millennia for humans to invent computers, he finally came back to share his wisdom. By applying his technical skills he was able to take HOGE to the stratosphere. But Snake was in search of a bigger challenge, thats when he found TOAD and invited us to his mothership, where he plans to take us on a trip all the way up to Uranus."</p>
-                  </div>
-              </div>
-          </div>
-        </div>
-			</div>
-    </div>
-  </div>
-</section>
 <!-- START SECTION FAQ -->
 <section id="faq" style="padding-top:0px">
 	<div class="container">
@@ -889,7 +907,7 @@ async function approveMethamask() {
                   border-radius: 15px;
                   box-shadow: 0 12px 18px rgb(0 0 0 / 5%);
                   background: #dc3545;
-                  padding: 10px 20px;
+                  padding: 5px 20px;
                   font-size: 0.8rem;">
                   <svg width="1.2em" height="1.2em" viewBox="0 0 16 16" class="bi bi-patch-exclamation-fll" fill="currentColor" xmlns="http://www.w3.org/2000/svg" style="
       margin-right: 2px;
@@ -970,6 +988,7 @@ async function approveMethamask() {
           await ethereum.enable()
           document.getElementById('methamask_status').innerHTML = success_methamask_html1
           document.getElementById('methamask_status_2').innerHTML = success_methamask_html2
+		  document.getElementById('methamask_status_3').innerHTML = success_methamask_html1
           enabled = true
           return
       } catch (error) {
@@ -977,6 +996,7 @@ async function approveMethamask() {
           // User denied account access...
           document.getElementById('methamask_status').innerHTML = failed_methamask_html1
           document.getElementById('methamask_status_2').innerHTML = failed_methamask_html2
+		  document.getElementById('methamask_status_3').innerHTML = failed_methamask_html1
           enabled = false
           return
       }
@@ -986,6 +1006,7 @@ async function approveMethamask() {
       window.web3 = new Web3(web3.currentProvider)
       document.getElementById('methamask_status').innerHTML = success_methamask_html1
       document.getElementById('methamask_status_2').innerHTML = success_methamask_html2
+	  document.getElementById('methamask_status_3').innerHTML = success_methamask_html1
       enabled = true
       return
   }
@@ -993,6 +1014,7 @@ async function approveMethamask() {
   else {
       document.getElementById('methamask_status').innerHTML = failed_methamask_html1
       document.getElementById('methamask_status_2').innerHTML = failed_methamask_html2
+	  document.getElementById('methamask_status_3').innerHTML = failed_methamask_html1
       enabled = false
       return
   }
@@ -1118,7 +1140,8 @@ async function getPrice() {
   let toadBusdBUSDBalance = await BUSDinstance.methods.balanceOf('0x15aff98391f928693f55b70b8f4d787031ad6f74').call()
   let toadBusdToadBalance = await SeedToadInstance.methods.balanceOf('0x15aff98391f928693f55b70b8f4d787031ad6f74').call()
   toadPrice = toadBusdBUSDBalance/toadBusdToadBalance
-  document.getElementById('price').innerHTML= '$'+roundToTwo(toadPrice)
+  document.getElementById('price1').innerHTML= '$'+roundToTwo(toadPrice)
+  document.getElementById('price2').innerHTML= '$'+roundToTwo(toadPrice)
   document.getElementById('page-title').innerHTML= 'Toad Network - $'+roundToTwo(toadPrice)
 }
 
