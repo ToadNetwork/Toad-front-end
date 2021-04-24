@@ -35,7 +35,7 @@
 
 </head>
 
-<body class="bg_light v_light_blue_pro" data-spy="scroll" data-offset="110" style="background: #6aff89">
+<body class="bg_light v_light_blue_pro" data-spy="scroll" data-offset="110" style="background: white">
 
 
 <!-- START LOADER -->
@@ -224,68 +224,194 @@ We believe this to be the fairest way to structure a yield farm.
     </div>
 </section>
 <!-- END SECTION BANNER -->
-<!-- START SECTION WHY CHOOSE US -->
 
+<!-- NEWS-->
+<script>
+fetch('https://api.rss2json.com/v1/api.json?rss_url=https://medium.com/feed/@SnakePlisken')
+   .then((res) => res.json())
+   .then((data) => {
+      //Do things
+	  authorImage = data.feed.image;
+	  
+	  const res = data.items //This is an array with the content. No feed, no info about author etc..
+       const posts = res.filter(item => item.categories.length > 0) // That's the main trick* !
+	    function toText(node) {
+         let tag = document.createElement('div')
+         tag.innerHTML = node
+         node = tag.innerText
+         return node
+      }
+	  function shortenText(text,startingPoint ,maxLength) {
+       return text.length > maxLength?
+          text.slice(startingPoint, maxLength):
+          text
+      }
+	  
+	   let output = '';
+      posts.forEach((item) => {
+         output += `
+         <li class="blog__post">
+            <a href="${item.link}">
+               
+               <div class="blog__content">
+                  <div class="blog_preview">
+                     <h2 class="blog__title">${shortenText(item.title, 0, 300)+ ''}</h2>
+					 <img src="${item.thumbnail}" class="blog__topImg"></img>
+					 <div class="blog__info">
+					 <span class = "author_image"><img alt="Snake Plisken" src="${authorImage}" width="28" height="28"></span>
+                     <span class="blog__author">By: ${item.author}</span>
+                     <span class="blog__date">${shortenText(item.pubDate,0 ,10)}</span>
+					 <hr>
+                  </div>
+                     <div id="mainPost">${shortenText(item.content,0 ,500) + ".......<b>READ MORE ON MEDIUM!</b>"}</div>
+                  </div>
+                  <hr>
+                  
+               </div>
+            <a/>
+         </li>`
+      });
+      document.querySelector('.blog__slider').innerHTML = output
+	  
+    });
+</script>
+<style>
+#mainPost{
+font-family: fell, Georgia, Cambria, "Times New Roman", Times, serif;
+}
+
+#blog{
+margin-top: 0em !IMPORTANT;
+}
+
+.author_image img{
+	width: 32px;
+	height: 32px;
+	border-radius: 16px;
+}
+
+#mainPost  img{
+ width: 50%
+}
+a {
+	 color: inherit;
+	 text-decoration: none;
+}
+ ul {
+	 list-style: none;
+}
+ .blog {
+	 display: flex;
+	 flex-direction: column;
+	 justify-content: center;
+	 align-items: center;
+}
+ .blog__header {
+	 text-align: center;
+}
+ .blog__header1 {
+	 margin: 0;
+	 font-size: 1.1rem;
+	 font-weight: 300;
+	 letter-spacing: 0.2px;
+	 text-transform: uppercase;
+}
+ .blog__header2 {
+	 margin-top: 0.3rem;
+	 font-size: 1.4rem;
+	 font-weight: 500;
+}
+ .blog__header2Span {
+	 font-weight: 400;
+	 font-size: 1.25rem;
+}
+ .blog__slider {
+	 padding: 0;
+	 display: flex;
+	 flex-direction: column;
+	 justify-content: center;
+}
+ .blog__post {
+	margin-top: 1em;
+	 margin-left: 20%;
+	 margin-right: 20%;
+	 width: 60%;
+	 -webkit-box-shadow: 9px 9px 20px 0px rgba(0, 0, 0, .4);
+	 -moz-box-shadow: 9px 9px 20px 0px rgba(0, 0, 0, .4);
+	 box-shadow: 9px 9px 20px 0px rgba(0, 0, 0, .4);
+}
+ .blog__topImg {
+	 display: block;
+	 margin-left: auto;
+	 margin-right: auto;
+	 width: 30%;
+}
+ .blog__content {
+	 padding: 0.8rem;
+}
+ .blog__preview {
+	 font-size: 0.95rem;
+	 font-weight: 300;
+}
+ .blog__title {
+	 margin-top: 0;
+	font-size: 2rem;
+	text-align: center;
+    font-family: sohne, "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-weight: 700;
+	line-height: 56px;
+	letter-spacing: -0.011em;
+}
+}
+ .blog__intro {
+	 line-height: 1.5;
+}
+ .blog__info {
+	 font-weight: 300;
+}
+ .blog__author {
+	 font-size: 1rem;
+	 font-family: fell, Georgia, Cambria, "Times New Roman", Times, serif;
+}
+ .blog__date {
+	 font-size: 1rem;
+	 font-family: fell, Georgia, Cambria, "Times New Roman", Times, serif;
+}
+ .blog__counter {
+	 margin: 0;
+	 padding: 0;
+	 display: flex;
+	 flex-direction: row;
+}
+ .blog__counterItem {
 	
+	 margin: 0.5rem;
+	 background-color: lightgray;
+	 border: 1px solid lightgray;
+	 border-radius: 25px;
+}
+ .blog__counterItem:hover {
+	 cursor: pointer;
+}
+ .blog__counterItem-active {
+	 border: 1px solid lightblue;
+	 background-color: lightblue;
+}
+</style>
 
-<!-- START SECTION TIMELINE -->
 
-<!-- END SECTION TIMELINE -->
-<section id="team" style="background: url(assets/images/toadpattern.jpg) center center / cover repeat;">
-	<div class="container">
-		<div class="row">
-		<div class="col-lg-12  col-md-12 col-sm-12">
-        <div class="title_default_dark title_border text-center">
-          <h4 class="animation animated fadeInUp" data-animation="fadeInUp" data-animation-delay="0.2s" style="animation-delay: 0.2s; opacity: 1;">Our Team</h4>
-          <div class="team-member col-lg-12  col-md-6 col-sm-6 res_md_mb_30 res_sm_mb_20">
-              <div class="bg_gray4 radius_box team_box_s3 animation animated fadeInUp" data-animation="fadeInUp" data-animation-delay="0.6s" style="animation-delay: 0.6s; opacity: 1;">
-                  <div class="text-center">
-                  	<img src="assets/images/toad_guy.png" alt="team2" style="height: 100px;">
-                  </div>
-                  <div class="team_info text-center">
-                      <h4><a href="#team2" class="content-popup">ToadGuy</a><p style="font-weight: 300;font-size: 0.9rem;margin-top: 10px;">TechnoToad</p></h4>
-                      <p class="animation animated fadeInUp" data-animation="fadeInUp" data-animation-delay="0.4s" style="animation-delay: 0.4s; opacity: 1;">"From a very young age, ToadGuy was always fascinated by shitcoins, and creating one was his childhood dream. His biggest heroes were Justin Sun and Richard Heart. In his teens, ToadGuy started to learn how to code between his fap sessions, and by the age of 32, while living in his mom's basement, he started working for crypto projects. During the 2017 ICO rush, ToadGuy eventually got rich and decided to move to Thailand. When asked about the reason why he simply responded: "Cheap hookers". But something didn't seem right for ToadGuy, he had all the ladyboys and the coke he wanted, but he still wasn't happy. Then all of a sudden it clicked to him: "he never accomplished his childhood dream!". He quickly booked an airplane ticket and traveled back to his mom's basement. During the next 2 months, he programmed non-stop, only leaving his room when his mom yelled at him. But by the end of February, he knew that he was finally going to be happy. Toad Network was finally live! Young Toad Guy looked up at the Justin Sun portrait he hanged in the wall of his bedroom when he was a child, and smiled. He knew Justin would be proud of him."</p>
-                  </div>
-              </div>
-          </div>
-        </div>
-		</div>
 
-      <div class="col-lg-12  col-md-12 col-sm-12" style="margin-top:35px">
-        <div class="title_default_dark title_border text-center">
-          <h4 class="animation animated fadeInUp" data-animation="fadeInUp" data-animation-delay="0.2s" style="animation-delay: 0.2s; opacity: 1;"></h4>
-          <div class="team-member col-lg-12  col-md-6 col-sm-6 res_md_mb_30 res_sm_mb_20">
-              <div class="bg_gray4 radius_box team_box_s3 animation animated fadeInUp" data-animation="fadeInUp" data-animation-delay="0.6s" style="animation-delay: 0.6s; opacity: 1;">
-                  <div class="text-center">
-                  	<img src="assets/images/snake.jpg" alt="team2" style="height: 100px;border-radius: 100px;">
-                  </div>
-                  <div class="team_info text-center">
-                      <h4><a href="#team2" class="content-popup">Snake</a><p style="font-weight: 300;font-size: 0.9rem;margin-top: 10px;">MASTER of The Coin</p></h4>
-                      <p class="animation animated fadeInUp" data-animation="fadeInUp" data-animation-delay="0.4s" style="animation-delay: 0.4s; opacity: 1;">"Abandoned and found by squid aliens, who taught him to communicate entirely through colors and flashing which turns out to be remarkably similar to binary code. Snake was a fast learner, when he was 14 years old he was already tokenizing entire galaxies and listing them into multiple intergalactic exchanges. After waiting millennia for humans to invent computers, he finally came back to share his wisdom. By applying his technical skills he was able to take HOGE to the stratosphere. But Snake was in search of a bigger challenge, thats when he found TOAD and invited us to his mothership, where he plans to take us on a trip all the way up to Uranus."</p>
-                  </div>
-              </div>
-          </div>
-        </div>
-			</div>
-			
-			 <div class="col-lg-12  col-md-12 col-sm-12" style="margin-top:35px">
-        <div class="title_default_dark title_border text-center">
-          <h4 class="animation animated fadeInUp" data-animation="fadeInUp" data-animation-delay="0.2s" style="animation-delay: 0.2s; opacity: 1;"></h4>
-          <div class="team-member col-lg-12  col-md-6 col-sm-6 res_md_mb_30 res_sm_mb_20">
-              <div class="bg_gray4 radius_box team_box_s3 animation animated fadeInUp" data-animation="fadeInUp" data-animation-delay="0.6s" style="animation-delay: 0.6s; opacity: 1;">
-                  <div class="text-center">
-                  	<img src="assets/images/goresttoad.jpg" alt="team2" style="height: 100px;border-radius: 100px;">
-                  </div>
-                  <div class="team_info text-center">
-                      <h4><a href="#team2" class="content-popup">Gorest</a><p style="font-weight: 300;font-size: 0.9rem;margin-top: 10px;">Master of Copy and Paste</p></h4>
-                      <p class="animation animated fadeInUp" data-animation="fadeInUp" data-animation-delay="0.4s" style="animation-delay: 0.4s; opacity: 1;">"In the universe of copied github code, Gorest was able to figure out an intergalatic algorithm that automagically converts spaghetti code into code that powers ion thrusters so spaceships can travel to different galaxies.  Gorest's algorithm was so good that someone stole it from him leaving him poor and rotting on the street.  Snake was looking for someone to write software that powers his mothership to Uranus, and he came across Gorest in the back-street allies while walking home from work one day."</p>
-                  </div>
-              </div>
-          </div>
-        </div>
-			</div>
-    </div>
-  </div>
+
+<section id="blog" class="blog">
+<h2 style = "text-align: center;"> NEWS </h2>
+  <ul class="blog__slider">
+    Posts go here
+  </ul>
+  <ul class="blog__counter">
+    <li class="blog__counterItem blog__counterItem-active"></li>
+    <li class="blog__counterItem"></li>
+    <li class="blog__counterItem"></li>
+  </ul>
 </section>
 
 

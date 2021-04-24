@@ -79,6 +79,10 @@ header {
 	margin-left: 2em !IMPORTANT;
 }
 
+#menubtn{
+	margin-right: 1em;
+}
+
 @media only screen and (max-width: 991px){
 	.navbar-nav{
 	flex-direction: column !IMPORTANT;
@@ -91,17 +95,22 @@ header {
 
 
 	.team-member{
-	flex: 0 0 100% !IMPORTANT;
-    max-width: 100% !IMPORTANT;
+		flex: 0 0 100% !IMPORTANT;
+		max-width: 100% !IMPORTANT;
 	}
 	
 
 	.navbar-mobile{
-	flex-direction: column !IMPORTANT;
+		flex-direction: column !IMPORTANT;
 	}
 	
 	#home_section{
-	padding-top: 250px !IMPORTANT;
+		padding-top: 250px !IMPORTANT;
+	}
+	
+	#menubtn{
+		margin-bottom: 0.5em;
+		width: 50px;
 	}
 }
 </style>
@@ -110,8 +119,8 @@ header {
 	<div class="container-fluid">
 		<nav class="navbar navbar-mobile">
 		
-		<button class="navbar-toggler animation" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" data-animation="fadeInDown" data-animation-delay="0.5s">
-        MENU <span class="ion-android-menu"></span>
+		<button id = "menubtn" class="navbar-toggler animation" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" data-animation="fadeInDown" data-animation-delay="0.5s">
+        <span class="ion-android-menu"></span>
       </button>
 	  
 			<a style="color: greenyellow; font-size: 16px;" class="navbar-brand page-scroll animation" target="_blank" rel=”noreferrer” href="https://dex.guru/token/0x463e737d8f740395abf44f7aac2d9531d8d539e9-bsc" data-animation="fadeInDown" data-animation-delay="0.5s">
@@ -693,20 +702,24 @@ We believe this to be the fairest way to structure a yield farm.
   <div class="bottom_footer" style="padding: 19px 10px 1px;">
     <div class="container">
       <div class="row" style="display:flow-root">
-        <div class="" style="width: 190px;
-    float: left;">
         <div class="footer_logo mb-3 animation animated fadeInUp" data-animation="fadeInUp" data-animation-delay="0.2s" style="animation-delay: 0.2s;opacity: 1;">
           <a class="navbar-brand page-scroll animation animated fadeInDown" href="#home_section" data-animation="fadeInDown" data-animation-delay="1s" style="float: left;animation-delay: 1s;opacity: 1;margin-top: -5px;">
-            <img class="logo_light" src="assets/images/logo.png" alt="logo" style="margin-right: 10px;height: 30px;margin-left:15px;">
+            <img class="logo_light" src="assets/images/logo.png" alt="logo" style="margin-top: 10px; margin-right: 10px;height: 30px;margin-left:15px;">
           </a>
-          <h5 style="color: white;font-size: 1.1rem;font-weight: 200;">
+          <h5 style="display: inline-block; color: white;font-size: 1.1rem; max-width: 200px; font-weight: 200;">
             Toad Network
           </h5>
-        </div>
-        </div>
-        <div class="" style="    margin-right: 50px;">
-          <ul class="navbar-nav nav_btn align-items-center" style="float:right">
-              <li class="" data-animation="fadeInDown" id="methamask_status_2">
+           <a class="nav_item col-4 col-xl-3 col-lg-6 col-md-4 col-sm-4 col-xs-4" href="https://toadytoad.medium.com" target="_blank" style="color: white;">
+                          <span style="display: inline-block;"><i class="fab fa-medium animation animated fadeInDown" style="margin-right: 5px;vertical-align: middle;font-size: 45px;animation-delay: 0.2s;opacity: 1;" data-animation="fadeInDown" data-animation-delay="0.2s"></i></span>
+           </a>
+           <a class="nav_item col-4 col-xl-3 col-lg-6 col-md-4 col-sm-4 col-xs-4" href="https://www.instagram.com/toad.network" target="_blank" style="color: white;">
+              <span style="display: inline-block; "><i class="fab fa-instagram-square animation animated fadeInDown" style="margin-right: 5px;vertical-align: middle;font-size: 45px;animation-delay: 0.2s;opacity: 1;" data-animation="fadeInDown" data-animation-delay="0.2s"></i></span>
+           </a>
+           <a class="nav_item col-4 col-xl-3 col-lg-6 col-md-4 col-sm-4 col-xs-4 " href="https://www.twitter.com/ToadNetwork" target="_blank" style="color: white;">
+               <span style="display: inline-block; "><i class="fab fa-twitter-square animation animated fadeInDown" style="margin-right: 5px;vertical-align: middle;font-size: 45px;animation-delay: 0.2s;opacity: 1;" data-animation="fadeInDown" data-animation-delay="0.2s"></i></span>
+            </a>
+						
+		  <div class="" style = "display: inline-block; margin-top: 10px;" data-animation="fadeInDown" id="methamask_status_2">
                 <a class="nav-link nav-btn" href="#" style="
                 text-transform: capitalize;
                 font-weight: 500;
@@ -716,17 +729,17 @@ We believe this to be the fairest way to structure a yield farm.
                 background: #fff;
                 padding: 6px 20px;
                 font-size: 0.8rem;
-                margin-top: -10px;
+                margin-top: 10px;
                 min-width: 200px;">
                   Approve Metamask
                   <img src="assets/images/nav-btn-ic.png" alt="" style="
                   margin-left: 5px;
                   margin-top: -2px;">
                 </a>
-              </li>
-          </ul>
+              </div>
+		  
         </div>
-      </div>
+        </div>
     </div>
   </div>
 </footer>

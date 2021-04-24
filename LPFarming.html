@@ -78,6 +78,11 @@ header {
 	margin-left: 2em !IMPORTANT;
 }
 
+#menubtn{
+	margin-right: 1em;
+	width: 50px;
+}
+
 @media only screen and (max-width: 991px){
 	.navbar-nav{
 	flex-direction: column !IMPORTANT;
@@ -102,14 +107,19 @@ header {
 	#home_section{
 	padding-top: 250px !IMPORTANT;
 	}
+	
+	#menubtn{
+		margin-bottom: 0.5em;
+		width: 50px;
+	}
 }
 </style>
 <header class="header_wrap fixed-top">
 	<div class="container-fluid">
 		<nav class="navbar navbar-mobile">
 		
-		<button class="navbar-toggler animation" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" data-animation="fadeInDown" data-animation-delay="0.5s">
-        MENU <span class="ion-android-menu"></span>
+		<button id = "menubtn" class="navbar-toggler animation" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" data-animation="fadeInDown" data-animation-delay="0.5s">
+        <span class="ion-android-menu"></span>
       </button>
 	  
 			<a style="color: greenyellow; font-size: 16px;" class="navbar-brand page-scroll animation" target="_blank" rel=”noreferrer” href="https://dex.guru/token/0x463e737d8f740395abf44f7aac2d9531d8d539e9-bsc" data-animation="fadeInDown" data-animation-delay="0.5s">
@@ -313,8 +323,7 @@ header {
                               </div>
                               <!--<div class="container col-4 col-xl-4 col-lg-4 col-md-4 text-center">-->
 
-                              <div class="container col-6 col-xl-6 col-lg-6 col-md-6  text-center" style="
-">
+                              <div class="container col-6 col-xl-6 col-lg-6 col-md-6  text-center" style="">
                                   <div class="price-top-part">
                                       <i class="far fa-money-bill-alt" style="
     color: white;
@@ -333,13 +342,10 @@ header {
                                   </div>
                               </div>
 
-                              <p class="col-12 white mb-3 text-center" style="
+                              <p class="container col-12 white mb-3 text-center" style="
 ">
-                                  <a class="btn btn-default btn-radius animation animated" onclick="rollDivs();" style="width: 140px; color: white; opacity: 1;">REINVEST</a>
-<span style="
-    visibility: hidden;
-">textexii</span>
-                                  <a class="btn btn-default btn-radius animation animated" onclick="withdrawDivs();" style="width: 140px; color: white; opacity: 1;">WITHDRAW</a>
+                                  <a class="btn btn-default btn-radius animation animated" onclick="rollDivs();" style= "margin-left: 5% ;margin-right: 5%; margin-bottom: 10px; width: 140px; color: white; opacity: 1;">REINVEST</a>
+                                  <a class="btn btn-default btn-radius animation animated" onclick="withdrawDivs();" style="margin-left: 5%; margin-right: 5%; margin-bottom: 10px; width: 140px; color: white; opacity: 1;">WITHDRAW</a>
                               </p>
                           </div>
                       </div>
@@ -488,20 +494,24 @@ header {
   <div class="bottom_footer" style="padding: 19px 10px 1px;">
     <div class="container">
       <div class="row" style="display:flow-root">
-        <div class="" style="width: 190px;
-    float: left;">
         <div class="footer_logo mb-3 animation animated fadeInUp" data-animation="fadeInUp" data-animation-delay="0.2s" style="animation-delay: 0.2s;opacity: 1;">
           <a class="navbar-brand page-scroll animation animated fadeInDown" href="#home_section" data-animation="fadeInDown" data-animation-delay="1s" style="float: left;animation-delay: 1s;opacity: 1;margin-top: -5px;">
-            <img class="logo_light" src="assets/images/logo.png" alt="logo" style="margin-right: 10px;height: 30px;margin-left:15px;">
+            <img class="logo_light" src="assets/images/logo.png" alt="logo" style="margin-top: 10px; margin-right: 10px;height: 30px;margin-left:15px;">
           </a>
-          <h5 style="color: white;font-size: 1.1rem;font-weight: 200;">
+          <h5 style="display: inline-block; color: white;font-size: 1.1rem; max-width: 200px; font-weight: 200;">
             Toad Network
           </h5>
-        </div>
-        </div>
-        <div class="" style="    margin-right: 50px;">
-          <ul class="navbar-nav nav_btn align-items-center" style="float:right">
-              <li class="" data-animation="fadeInDown" id="methamask_status_2">
+           <a class="nav_item col-4 col-xl-3 col-lg-6 col-md-4 col-sm-4 col-xs-4" href="https://toadytoad.medium.com" target="_blank" style="color: white;">
+                          <span style="display: inline-block;"><i class="fab fa-medium animation animated fadeInDown" style="margin-right: 5px;vertical-align: middle;font-size: 45px;animation-delay: 0.2s;opacity: 1;" data-animation="fadeInDown" data-animation-delay="0.2s"></i></span>
+           </a>
+           <a class="nav_item col-4 col-xl-3 col-lg-6 col-md-4 col-sm-4 col-xs-4" href="https://www.instagram.com/toad.network" target="_blank" style="color: white;">
+              <span style="display: inline-block; "><i class="fab fa-instagram-square animation animated fadeInDown" style="margin-right: 5px;vertical-align: middle;font-size: 45px;animation-delay: 0.2s;opacity: 1;" data-animation="fadeInDown" data-animation-delay="0.2s"></i></span>
+           </a>
+           <a class="nav_item col-4 col-xl-3 col-lg-6 col-md-4 col-sm-4 col-xs-4 " href="https://www.twitter.com/ToadNetwork" target="_blank" style="color: white;">
+               <span style="display: inline-block; "><i class="fab fa-twitter-square animation animated fadeInDown" style="margin-right: 5px;vertical-align: middle;font-size: 45px;animation-delay: 0.2s;opacity: 1;" data-animation="fadeInDown" data-animation-delay="0.2s"></i></span>
+            </a>
+						
+		  <div class="" style = "display: inline-block; margin-top: 10px;" data-animation="fadeInDown" id="methamask_status_2">
                 <a class="nav-link nav-btn" href="#" style="
                 text-transform: capitalize;
                 font-weight: 500;
@@ -511,17 +521,17 @@ header {
                 background: #fff;
                 padding: 6px 20px;
                 font-size: 0.8rem;
-                margin-top: -10px;
+                margin-top: 10px;
                 min-width: 200px;">
                   Approve Metamask
                   <img src="assets/images/nav-btn-ic.png" alt="" style="
                   margin-left: 5px;
                   margin-top: -2px;">
                 </a>
-              </li>
-          </ul>
+              </div>
+		  
         </div>
-      </div>
+        </div>
     </div>
   </div>
 </footer>
