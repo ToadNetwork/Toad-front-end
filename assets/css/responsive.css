@@ -351,9 +351,6 @@ section.small_pt {
 	left: 100%;
 	top: 0;
 }
-.navbar-nav .dropdown-menu {
-	display: none;
-}
 .navbar-expand-lg .navbar-nav .dropdown-menu li:hover > a {
 	background-color: #3231a8;
 }
