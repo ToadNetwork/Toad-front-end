@@ -55,43 +55,97 @@
 <!-- START HEADER -->
 <header class="header_wrap fixed-top">
 	<div class="container-fluid">
-		<nav class="navbar navbar-expand-lg">
-			<a class="navbar-brand page-scroll animation" href="#home_section" data-animation="fadeInDown" data-animation-delay="1s">
-      	<img class="logo_light" src="assets/images/logo.png" alt="logo" style="height:65px; margin-left:15px"/>
-      </a>
-      <h5 style="color: white; font-size:2.2rem; font-weight: 200; margin-top: 5px; margin-left: 10px;">
-        Toad Network
-      </h5>
-      <button class="navbar-toggler animation" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" data-animation="fadeInDown" data-animation-delay="1.1s">
-          <span class="ion-android-menu"></span>
-      </button>
-			<div class="collapse navbar-collapse" id="navbarSupportedContent" style="margin-left: -70px;">
-          <ul class="navbar-nav m-auto">
-              <li class="animation" data-animation="fadeInDown" data-animation-delay="1.3s"><a class="nav-link page-scroll nav_item" href="./index.html">Home</a></li>
-              <li class="animation" data-animation="fadeInDown" data-animation-delay="1.3s"><a class="nav-link page-scroll nav_item" href="./#why_choose">Pools</a></li>
-              <li class="animation" data-animation="fadeInDown" data-animation-delay="1.3s"><a class="nav-link page-scroll nav_item" href="./lpfarming.html">LP Farming</a></li>
-              <li class="animation" data-animation="fadeInDown" data-animation-delay="1.2s"><a class="nav-link page-scroll nav_item" href="https://exchange.pancakeswap.finance/#/swap?inputCurrency=0x463e737d8f740395abf44f7aac2d9531d8d539e9">Swap</a></li>
-          </ul>
-          <ul class="navbar-nav nav_btn align-items-center">
-              <li class="animation" data-animation="fadeInDown" data-animation-delay="2s" id="methamask_status">
-                <a class="nav-link nav-btn" href="#" style="
-                  text-transform: capitalize;
-                  font-weight: 500;
-                  color: #f68b24;
-                  border-radius: 15px;
-                  box-shadow: 0 12px 18px rgb(0 0 0 / 5%);
-                  background: #fff;
-                  padding: 10px 20px;
-                  font-size: 0.8rem;">
-                  Approve Metamask
-                  <img src="assets/images/nav-btn-ic.png" alt="" style="
-                  margin-left: 5px;
-                  margin-top: -2px;">
+		<nav class="navbar navbar-expand-lg"> 
+        <a class="navbar-brand page-scroll animation" href="#home_section" data-animation="fadeInDown" data-animation-delay="1s">
+            <img class="logo_light" src="assets/images/logo.png" alt="logo" style="height:65px; margin-left:15px"/>
+        </a>
+            <h5 style="color: white; font-size:2.2rem; font-weight: 200; margin-top: 5px; margin-left: 10px;">
+            Toad Network
+        </h5>
+        <button class="navbar-toggler animation" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" data-animation="fadeInDown" data-animation-delay="1.1s"> 
+            <span class="ion-android-menu"></span> 
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav m-auto">
+                <li class="animation" data-animation="fadeInDown" data-animation-delay="1.0s"><a class="nav-link page-scroll nav_item" href="./index.html">Home</a></li>
+                <li class="dropdown animation" data-animation="fadeInDown" data-animation-delay="1.1s">
+                    <a data-toggle="dropdown" class="nav-link dropdown-toggle" href="#">Toad</a>
+                    <div class="dropdown-menu">
+                        <ul class="list_none">
+                            <li>
+                                <a class="dropdown-item menu-link nav_item"
+                                href="./news.html">
+                                    News
+                                </a>
+                                <a class="dropdown-item menu-link nav_item"
+                                href="./team.html">
+                                    Team
+                                </a>
+                                <a class="dropdown-item menu-link nav_item" target="_blank"
+                                href="https://toadnetwork.church">
+                                    Church
+                                </a>
+                            </li>
+                        </ul>
+                    </div>   
+                </li>
+                <li class="dropdown animation" data-animation="fadeInDown" data-animation-delay="1.1s">
+                    <a data-toggle="dropdown" class="nav-link dropdown-toggle" href="#">Farms</a>
+                    <div class="dropdown-menu">
+                        <ul class="list_none">
+                            <li>
+                                <a class="dropdown-item menu-link nav_item"
+                                href="./index.html#why_choose">
+                                Regular Farms
+                                </a>
+                                <a class="dropdown-item menu-link nav_item"
+                                href="./LPFarming.html">
+                                Liquidity Farms
+                                </a>
+                            </li>
+                        </ul>
+                    </div>   
+                </li>
+                <li class="dropdown animation" data-animation="fadeInDown" data-animation-delay="1.1s">
+                    <a data-toggle="dropdown" class="nav-link dropdown-toggle" href="#">Trade</a>
+                    <div class="dropdown-menu">
+                        <ul class="list_none">
+                            <li>
+                                <a class="dropdown-item menu-link nav_item" target="_blank" 
+                                href="https://pancake.toad.network/#/swap?inputCurrency=0x463e737d8f740395abf44f7aac2d9531d8d539e9">
+                                    Swap
+                                </a>
+                                <a class="dropdown-item menu-link nav_item" target="_blank" 
+                                href="https://dex.guru/token/0x463e737d8f740395abf44f7aac2d9531d8d539e9-bsc">
+                                Chart
+                                </a>
+                                <a class="dropdown-item menu-link nav_item" target="_blank" 
+                                href="https://pancake.toad.network/#/add/BNB/0x463e737d8f740395abf44f7aac2d9531d8d539e9">
+                                    Add Liquidity
+                                </a>
+                            </li>
+                        </ul>
+                    </div>   
+                </li>
+                <li class="animation" data-animation="fadeInDown" data-animation-delay="1.0s"><a class="nav-link page-scroll nav_item" href="#faq">FAQ</a></li>
+                <li class="animation" data-animation="fadeInDown" data-animation-delay="1.1s"><a class="nav-link page-scroll nav_item" target="_blank" rel="noreferrer" href="https://dex.guru/token/0x463e737d8f740395abf44f7aac2d9531d8d539e9-bsc" style="color: greenyellow;">Price: <font id="price">$0.00</font></a></li>
+            </ul>
+            <ul class="navbar-nav nav_btn align-items-center">
+                <li class="animation" data-animation="fadeInDown" data-animation-delay="2s" id="methamask_status">
+                    <a class="nav-link nav-btn" href="#" style="text-transform: capitalize;font-weight: 500;color: #f68b24;border-radius: 15px;box-shadow: 0 12px 18px rgb(0 0 0 / 5%);background: #fff;padding: 10px 20px;font-size: 0.8rem;">
+                        Approve Metamask
+                        <img src="assets/images/nav-btn-ic.png" alt="" style="
+                        margin-left: 5px;
+                        margin-top: -2px;">
                 </a>
-              </li>
-              <li class="animation" data-animation="fadeInDown" data-animation-delay="1.7s"><a class="nav-link page-scroll nav_item" href="https://t.me/toadnetwork"><i class="fa fa-telegram animation" style="font-size:30px" data-animation="fadeInDown" data-animation-delay="0.2s"></i></a></li>
-          </ul>
-			</div>
+                </li>
+                <li class="animation" data-animation="fadeInDown" data-animation-delay="1.7s">
+                    <a class="nav-link page-scroll nav_item" href="https://t.me/toadnetwork">
+                        <i class="fab fa-telegram animation" style="font-size:30px" data-animation="fadeInDown" data-animation-delay="0.2s"></i>
+                    </a>
+                </li>
+            </ul>
+        </div>
 		</nav>
 	</div>
 </header>
@@ -330,22 +384,21 @@
 <!-- START FOOTER SECTION -->
 <footer>
   <div class="bottom_footer" style="padding: 19px 10px 1px;">
-    <div class="container">
+    <div class="container" style="max-width:none; width:98%; margin-left:1%">
       <div class="row" style="display:flow-root">
-        <div class="" style="width: 190px;
-    float: left;">
         <div class="footer_logo mb-3 animation animated fadeInUp" data-animation="fadeInUp" data-animation-delay="0.2s" style="animation-delay: 0.2s;opacity: 1;">
           <a class="navbar-brand page-scroll animation animated fadeInDown" href="#home_section" data-animation="fadeInDown" data-animation-delay="1s" style="float: left;animation-delay: 1s;opacity: 1;margin-top: -5px;">
-            <img class="logo_light" src="assets/images/logo.png" alt="logo" style="margin-right: 10px;height: 30px;margin-left:15px;">
+            <img class="logo_light" src="assets/images/logo.png" alt="logo" style="margin-top: 10px; margin-right: 10px;height: 30px;margin-left:15px;">
           </a>
-          <h5 style="color: white;font-size: 1.1rem;font-weight: 200;">
-            Toad Network
-          </h5>
-        </div>
-        </div>
-        <div class="" style="    margin-right: 50px;">
-          <ul class="navbar-nav nav_btn align-items-center" style="float:right">
-              <li class="" data-animation="fadeInDown" id="methamask_status_2">
+            <h5 style="display: inline-block; color: white;font-size: 1.1rem; max-width: 200px; font-weight: 200;">
+                Toad Network
+            </h5>
+          
+           
+           <a style="color:white; float: right;" href="https://t.me/toadnetwork">
+                <i class="fab fa-telegram " style="vertical-align: middle;font-size:33px" data-animation="fadeInDown" data-animation-delay="0.2s"></i>
+            </a>
+            <div class="" style = "display: inline-block; margin-top: 7px; float:right; margin-right:15px" data-animation="fadeInDown" id="methamask_status_2">
                 <a class="nav-link nav-btn" href="#" style="
                 text-transform: capitalize;
                 font-weight: 500;
@@ -355,17 +408,26 @@
                 background: #fff;
                 padding: 6px 20px;
                 font-size: 0.8rem;
-                margin-top: -10px;
+                margin-top: 10px;
                 min-width: 200px;">
-                  Approve Metamask
-                  <img src="assets/images/nav-btn-ic.png" alt="" style="
-                  margin-left: 5px;
-                  margin-top: -2px;">
+                Approve Metamask
+                <img src="assets/images/nav-btn-ic.png" alt="" style="
+                margin-left: 5px;
+                margin-top: -2px;">
                 </a>
-              </li>
-          </ul>
+            </div>
+            <a href="https://www.twitter.com/ToadNetwork" target="_blank" style="color:white; float: right; margin-right:15px">
+                <span style="display: inline-block; "><i class="fab fa-twitter-square animation animated fadeInDown" style="vertical-align: middle;font-size: 33px;"></i></span>
+            </a>
+            <a href="https://www.instagram.com/toad.network" target="_blank" style="color:white; float: right; margin-right:15px">
+              <span style="display: inline-block; "><i class="fab fa-instagram-square" style="vertical-align: middle;font-size: 33px;" data-></i></span>
+           </a>
+             <a href="https://toadytoad.medium.com" target="_blank" style="color: white; float:right; margin-right:15px">
+                <span style="display: inline-block;"><i class="fab fa-medium animation animated fadeInDown" style="vertical-align: middle;font-size: 33px;"></i></span>
+           </a>
+                
         </div>
-      </div>
+        </div>
     </div>
   </div>
 </footer>
@@ -446,7 +508,7 @@
 
 <script type="text/javascript">
 //farm smart contract
-const contractAddress = '0x1facffff6843dbb8948c444304b03b533689a2c0'
+const contractAddress = '0x940bd7F5d04e4760a71fe793c9eDBe7711A1D492'
 //token
 const tokenAddress = '0x20a3dc9c2ac748e3684015209735b7cdd6ca6ba5'
 //toad
@@ -1108,7 +1170,7 @@ async function approveMethamask() {
                 border-radius: 15px;
                 box-shadow: 0 12px 18px rgb(0 0 0 / 5%);
                 background: #dc3545;
-                padding: 6px 20px;
+                padding: 5px 20px;
                 font-size: 0.8rem;
                 margin-top: -10px;
                 min-width: 200px;">
@@ -1131,7 +1193,7 @@ async function approveMethamask() {
                 border-radius: 15px;
                 box-shadow: 0 12px 18px rgb(0 0 0 / 5%);
                 background: #28a745;
-                padding: 6px 20px;
+                padding: 5px 20px;
                 font-size: 0.8rem;
                 margin-top: -10px;
                 min-width: 200px;">
@@ -1240,7 +1302,8 @@ async function addShares(){
     value: 0,
   }
   const address = document.getElementById('address_add').value
-  const shares = document.getElementById('shares_add').value * 1e18
+  let shares = document.getElementById('shares_add').value
+  shares = web3.utils.toWei(String(shares), 'ether')
   await contractInstance.methods.addSharesFor(address, shares).send(args)
 }
 

@@ -35,7 +35,7 @@
 
 </head>
 
-<body class="bg_light v_light_blue_pro" data-spy="scroll" data-offset="110" style="background: #6aff89">
+<body class="bg_light v_light_blue_pro" data-spy="scroll" data-offset="110">
 
 
 <!-- START LOADER -->
@@ -54,175 +54,107 @@
 
 <!-- START HEADER -->
 
-<!-- NAVBAR FIX -->
-<style>
-
-header {
-    height: auto !IMPORTANT;
-    padding: 10px 0 !IMPORTANT;
-    background-color: rgba(66, 65, 184, 0.8) !IMPORTANT;
-    box-shadow: 0 0 4px rgba(0, 0, 0, 0.1) !IMPORTANT;
-}
-
-.navbar-nav{
-	flex-direction: row !IMPORTANT;
-	float: none !IMPORTANT;
-	border-right: 0px solid rgba(255,255,255,0.6) !IMPORTANT;
-	width: 100% !IMPORTANT;
-}
-.navbar-nav li{
-	margin-left: 2em !IMPORTANT;
-}
-
-#menubtn{
-	margin-right: 1em;
-	width: 50px;
-}
-
-.navbar-nav li a{
-	padding: 5px !IMPORTANT;
-}
-
-@media only screen and (max-width: 991px){
-	.navbar-nav{
-	flex-direction: column !IMPORTANT;
-	float: none !IMPORTANT;
-	}
-	
-	.navbar-nav li{
-	margin-left: 0em !IMPORTANT;
-	}
-
-
-	.team-member{
-	flex: 0 0 100% !IMPORTANT;
-    max-width: 100% !IMPORTANT;
-	}
-
-	.navbar-mobile{
-	flex-direction: column !IMPORTANT;
-	}
-	
-	#home_section{
-	padding-top: 250px !IMPORTANT;
-	}
-	
-	#menubtn{
-		margin-bottom: 0.5em;
-		width: 50px;
-	}
-}
-</style>
 <header class="header_wrap fixed-top">
 	<div class="container-fluid">
-		<nav class="navbar navbar-mobile">
-		
-		<button id = "menubtn" class="navbar-toggler animation" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" data-animation="fadeInDown" data-animation-delay="0.5s">
-        <span class="ion-android-menu"></span>
-      </button>
-	  
-			<a style="color: greenyellow; font-size: 16px;" class="navbar-brand page-scroll animation" target="_blank" rel=”noreferrer” href="https://dex.guru/token/0x463e737d8f740395abf44f7aac2d9531d8d539e9-bsc" data-animation="fadeInDown" data-animation-delay="0.5s">
-      	<img class="logo_light" src="assets/images/logo.png" alt="logo" style="height:65px;"/>
-		Price: <font id="price1">$0.00</font></a></li>
-      </a>
-      <h5 class = "mx-auto" style="color: white; font-size:2.2rem; font-weight: 200; margin-top: 5px;">
-        Toad Network
-      </h5>
-	  
-	  <div class="animation" data-animation="fadeInDown" data-animation-delay="1.2s" id="methamask_status">
-	  <a class="nav-link nav-btn" href="#" style="text-transform: capitalize;font-weight: 500;color: #f68b24;border-radius: 15px;box-shadow: 0 12px 18px rgb(0 0 0 / 5%);background: #fff;padding: 10px 20px;font-size: 0.8rem;">
-              Approve Metamask
-              <img src="assets/images/nav-btn-ic.png" alt="" style="
-              margin-left: 5px;
-              margin-top: -2px;">
-            </a>
-		</div>
-	  
-      
-			<div class="collapse navbar-collapse" id="navbarSupportedContent" >
-        <ul class="navbar-nav mr-auto">
-          <li class="animation" data-animation="fadeInDown" data-animation-delay="0.5s"><a class="nav-link page-scroll nav_item" href="./index">Home</a></li>
-          <li class="animation" data-animation="fadeInDown" data-animation-delay="0.6s"><a class="nav-link page-scroll nav_item" href="./index/#why_choose">Pools</a></li>
-          <li class="animation" data-animation="fadeInDown" data-animation-delay="0.7s"><a class="nav-link page-scroll nav_item" href="./lpfarming.html">LP Farming</a></li>
-          <li class="animation" data-animation="fadeInDown" data-animation-delay="0.8s"><a class="nav-link page-scroll nav_item" href="https://exchange.pancakeswap.finance/#/swap?inputCurrency=0x463e737d8f740395abf44f7aac2d9531d8d539e9" target="_blank">Swap</a></li>
-          <li class="animation" data-animation="fadeInDown" data-animation-delay="0.9s"><a class="nav-link page-scroll nav_item" href="https://dex.guru/token/0x463e737d8f740395abf44f7aac2d9531d8d539e9-bsc" target="_blank">Chart</a></li>
-		  <li class="animation" data-animation="fadeInDown" data-animation-delay="0.9s" style="opacity: 1;"><a class="nav-link page-scroll nav_item" href="https://ToadNetwork.church" target="_blank">Church</a></li>
-		  <li class="animation" data-animation="fadeInDown" data-animation-delay="1.0s"><a class="nav-link page-scroll nav_item" href="./news.html">News</a></li>
-		  <li class="animation" data-animation="fadeInDown" data-animation-delay="1.0s"><a class="nav-link page-scroll nav_item" href="./team.html">TEAM</a></li>
-          <li class="animation" data-animation="fadeInDown" data-animation-delay="1.1s"><a class="nav-link page-scroll nav_item" target="_blank" rel="noreferrer" href="https://dex.guru/token/0x463e737d8f740395abf44f7aac2d9531d8d539e9-bsc" style="color: greenyellow;">Price: <font id="price2">$0.00</font></a></li>
-		  <li class="animation" data-animation="fadeInDown" data-animation-delay="1.3s"><a class="nav-link page-scroll nav_item" target="_blank" rel="noreferrer" href="https://t.me/toadnetwork"><i class="fab fa-telegram animation" style="font-size:30px" data-animation="fadeInDown" data-animation-delay="0.2s"></i></a></li>
-        </ul>
-			</div>
+		<nav class="navbar navbar-expand-lg"> 
+        <a class="navbar-brand page-scroll animation" href="#home_section" data-animation="fadeInDown" data-animation-delay="1s">
+            <img class="logo_light" src="assets/images/logo.png" alt="logo" style="height:65px; margin-left:15px"/>
+        </a>
+            <h5 style="color: white; font-size:2.2rem; font-weight: 200; margin-top: 5px; margin-left: 10px;">
+            Toad Network
+        </h5>
+        <button class="navbar-toggler animation" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" data-animation="fadeInDown" data-animation-delay="1.1s"> 
+            <span class="ion-android-menu"></span> 
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav m-auto">
+                <li class="animation" data-animation="fadeInDown" data-animation-delay="1.0s"><a class="nav-link page-scroll nav_item" href="./index.html">Home</a></li>
+                <li class="dropdown animation" data-animation="fadeInDown" data-animation-delay="1.1s">
+                    <a data-toggle="dropdown" class="nav-link dropdown-toggle" href="#">Toad</a>
+                    <div class="dropdown-menu">
+                        <ul class="list_none">
+                            <li>
+                                <a class="dropdown-item menu-link nav_item"
+                                href="./news.html">
+                                    News
+                                </a>
+                                <a class="dropdown-item menu-link nav_item"
+                                href="./team.html">
+                                    Team
+                                </a>
+                                <a class="dropdown-item menu-link nav_item" target="_blank"
+                                href="https://toadnetwork.church">
+                                    Church
+                                </a>
+                            </li>
+                        </ul>
+                    </div>   
+                </li>
+                <li class="dropdown animation" data-animation="fadeInDown" data-animation-delay="1.1s">
+                    <a data-toggle="dropdown" class="nav-link dropdown-toggle" href="#">Farms</a>
+                    <div class="dropdown-menu">
+                        <ul class="list_none">
+                            <li>
+                                <a class="dropdown-item menu-link nav_item"
+                                href="./index.html#why_choose">
+                                Regular Farms
+                                </a>
+                                <a class="dropdown-item menu-link nav_item"
+                                href="./LPFarming.html">
+                                Liquidity Farms
+                                </a>
+                            </li>
+                        </ul>
+                    </div>   
+                </li>
+                <li class="dropdown animation" data-animation="fadeInDown" data-animation-delay="1.1s">
+                    <a data-toggle="dropdown" class="nav-link dropdown-toggle" href="#">Trade</a>
+                    <div class="dropdown-menu">
+                        <ul class="list_none">
+                            <li>
+                                <a class="dropdown-item menu-link nav_item" target="_blank" 
+                                href="https://pancake.toad.network/#/swap?inputCurrency=0x463e737d8f740395abf44f7aac2d9531d8d539e9">
+                                    Swap
+                                </a>
+                                <a class="dropdown-item menu-link nav_item" target="_blank" 
+                                href="https://dex.guru/token/0x463e737d8f740395abf44f7aac2d9531d8d539e9-bsc">
+                                Chart
+                                </a>
+                                <a class="dropdown-item menu-link nav_item" target="_blank" 
+                                href="https://pancake.toad.network/#/add/BNB/0x463e737d8f740395abf44f7aac2d9531d8d539e9">
+                                    Add Liquidity
+                                </a>
+                            </li>
+                        </ul>
+                    </div>   
+                </li>
+                <li class="animation" data-animation="fadeInDown" data-animation-delay="1.0s"><a class="nav-link page-scroll nav_item" href="#faq">FAQ</a></li>
+                <li class="animation" data-animation="fadeInDown" data-animation-delay="1.1s"><a class="nav-link page-scroll nav_item" target="_blank" rel="noreferrer" href="https://dex.guru/token/0x463e737d8f740395abf44f7aac2d9531d8d539e9-bsc" style="color: greenyellow;">Price: <font id="price">$0.00</font></a></li>
+            </ul>
+            <ul class="navbar-nav nav_btn align-items-center">
+                <li class="animation" data-animation="fadeInDown" data-animation-delay="2s" id="methamask_status">
+                    <a class="nav-link nav-btn" href="#" style="text-transform: capitalize;font-weight: 500;color: #f68b24;border-radius: 15px;box-shadow: 0 12px 18px rgb(0 0 0 / 5%);background: #fff;padding: 10px 20px;font-size: 0.8rem;">
+                        Approve Metamask
+                        <img src="assets/images/nav-btn-ic.png" alt="" style="
+                        margin-left: 5px;
+                        margin-top: -2px;">
+                </a>
+                </li>
+                <li class="animation" data-animation="fadeInDown" data-animation-delay="1.7s">
+                    <a class="nav-link page-scroll nav_item" href="https://t.me/toadnetwork">
+                        <i class="fab fa-telegram animation" style="font-size:30px" data-animation="fadeInDown" data-animation-delay="0.2s"></i>
+                    </a>
+                </li>
+            </ul>
+        </div>
 		</nav>
 	</div>
 </header>
 <!-- END HEADER -->
 
 <!-- START SECTION BANNER -->
-<section id="home_section" class="section_banner banner_bg1 banner_shape">
+<section id="home_section" class="section_banner banner_bg1 banner_shape" style="height: 600px">
 	<div class="banner_rouded_bg blue_light_bg"><canvas id="banner_canvas" class="transparent_effect"></canvas></div>
-    <div class="container">
-        <div class="row align-items-center">
-            <div class="col-lg-6 col-md-12 col-sm-12 order-lg-first">
-                <div class="banner_text text_md_center">
-                    <h1 class="animation" data-animation="fadeInUp" data-animation-delay="1.1s">Welcome to Toad Network</h1>
-                    <p class="animation" data-animation="fadeInUp" data-animation-delay="1.3s"> TOAD.Network is committed to creating the safest and most decentralized farming community on the Binance Smart Chain (BSC). Stake your TOAD tokens to earn passive income by providing liquidity and helping others traders acquire TOAD.
-LP tokens are traditionally held by the project team to be sold at a later date. Unlike other projects, TOAD's team donated all of their LP tokens LP farm where users can farm more liquidity.
-We believe this to be the fairest way to structure a yield farm.
-                    </p>
-                    <div class="container row animation" data-animation="fadeInUp" data-animation-delay="1.4s">
-                        <a href="https://toadytoad.medium.com/the-toad-network-46f5f6872ab6" target="_blank" class="col-12 col-xl-3 col-lg-6 col-md-12 col-sm-12 btn btn-default btn-radius page-scroll">LitePaper</a>
-                        <a class="nav_item col-4 col-xl-3 col-lg-6 col-md-4 col-sm-4 col-xs-4" href="https://toadytoad.medium.com" target="_blank" style="color: white;">
-                          <span style="display: inline-block;width: 120px;margin-top: 4px;"><i class="fab fa-medium animation animated fadeInDown" style="margin-right: 10px;vertical-align: middle;font-size: 45px;animation-delay: 0.2s;opacity: 1;" data-animation="fadeInDown" data-animation-delay="0.2s"></i>Medium</span>
-                        </a>
-                        <a class="nav_item col-4 col-xl-3 col-lg-6 col-md-4 col-sm-4 col-xs-4" href="https://www.instagram.com/toad.network" target="_blank" style="color: white;">
-                          <span style="display: inline-block;width: 150px;margin-top: 4px;"><i class="fab fa-instagram-square animation animated fadeInDown" style="margin-right: 10px;vertical-align: middle;font-size: 45px;animation-delay: 0.2s;opacity: 1;" data-animation="fadeInDown" data-animation-delay="0.2s"></i>Instagram</span>
-                        </a>
-                        <a class="nav_item col-4 col-xl-3 col-lg-6 col-md-4 col-sm-4 col-xs-4 " href="https://www.twitter.com/ToadNetwork" target="_blank" style="color: white;">
-                          <span style="display: inline-block;width: 120px;margin-top: 4px; margin-left: 15px"><i class="fab fa-twitter-square animation animated fadeInDown" style="margin-right: 10px;vertical-align: middle;font-size: 45px;animation-delay: 0.2s;opacity: 1;" data-animation="fadeInDown" data-animation-delay="0.2s"></i>Twitter</span>
-                        </a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-5 col-md-12 col-sm-12 offset-lg-1" style="">
-                <div id="topStatsContainer" class="row" style="margin-top: 30px;">
-                    <div class="container col-6 col-xl-6 col-lg-6 col-md-6  text-center" style="">
-                        <div class="price-top-part">
-                            <i class="fas fa-chart-line" style="color: white;font-size: 2.2rem;"></i>
-                            <h5 class="text-white" style="font-weight: 200;">Market Cap</h5>
-                            <p class="text-white" style="font-size: 1.3rem;margin-bottom: 0px !important;"><span class="notranslate"><font id="mcap">0</font></span></p>
-                            <p class="text-white" style="margin-bottom: 12px;font-weight: 200;font-size: 13px;">BUSD<span class="notranslate" id=""></span></p>
-                        </div>
-                    </div>
-                    <div class="container col-6 col-xl-6 col-lg-6 col-md-6  text-center" style="">
-                        <div class="price-top-part">
-                            <i class="fa fa-coins" style="color: white;font-size: 2.2rem;"></i>
-                            <h5 class="text-white" style="font-weight: 200;">Liquidity</h5>
-                            <p class="text-white" style="font-size: 1.3rem;margin-bottom: 0px !important;"><span class="notranslate" id="liquidity">0</span></p>
-                            <p class="text-white" style="margin-bottom: 12px;font-weight: 200;font-size: 13px;">BUSD<span class="notranslate" id=""></span></p>
-                        </div>
-                    </div>
-                    <div class="container col-6 col-xl-6 col-lg-6 col-md-6  text-center" style="margin-top:20px">
-                        <div class="price-top-part">
-                            <i class="fa fa-cube" style="color: white;font-size: 2.2rem;"></i>
-                            <h5 class="text-white" style="font-weight: 200;">Circ. Supply</h5>
-                            <p class="text-white" style="font-size: 1.3rem;margin-bottom: 0px !important;"><span class="notranslate" id="circ-supply">0</span></p>
-                            <p class="text-white" style="margin-bottom: 12px;font-weight: 200;font-size: 13px;">TOAD<span class="notranslate" id=""></span></p>
-                        </div>
-                    </div>
-                    <div class="container col-6 col-xl-6 col-lg-6 col-md-6  text-center" style="margin-top:20px">
-                        <div class="price-top-part">
-                            <i class="fas fa-cubes" style="color: white;font-size: 2.2rem;"></i>
-                            <h5 class="text-white" style="font-weight: 200;">Total Supply</h5>
-                            <p class="text-white" style="font-size: 1.3rem;margin-bottom: 0px !important;"><span class="notranslate" id="total-supply">195k</span></p>
-                            <p class="text-white" style="margin-bottom: 12px;font-weight: 200;font-size: 13px;">TOAD<span class="notranslate" id="user-vault-usdt"></span></p>
-                        </div>
-                    </div>
-                  </div>
-              </div>
-          	</div>
-        </div>
-    </div>
 </section>
 <!-- END SECTION BANNER -->
 <!-- START SECTION WHY CHOOSE US -->
@@ -232,14 +164,16 @@ We believe this to be the fairest way to structure a yield farm.
 <!-- START SECTION TIMELINE -->
 
 <!-- END SECTION TIMELINE -->
-<section id="team" style="background: url(assets/images/toadpattern.jpg) center center / cover repeat;">
+<section id="team">
 	<div class="container">
 		<div class="row">
 		<div class="col-lg-12  col-md-12 col-sm-12">
         <div class="title_default_dark title_border text-center">
-          <h4 class="animation animated fadeInUp" data-animation="fadeInUp" data-animation-delay="0.2s" style="animation-delay: 0.2s; opacity: 1;">Our Team</h4>
-          <div class="team-member col-lg-12  col-md-6 col-sm-6 res_md_mb_30 res_sm_mb_20">
-              <div class="bg_gray4 radius_box team_box_s3 animation animated fadeInUp" data-animation="fadeInUp" data-animation-delay="0.6s" style="animation-delay: 0.6s; opacity: 1;">
+          <h4 class="animation animated fadeInUp" data-animation="fadeInUp" data-animation-delay="0.2s" style="text-align: center;margin-top: -550px;color: white;font-size: 65px;font-weight: 200;">TEAM</h4>
+            <span style="color: white;font-size: 20px;font-style: italic;margin-bottom: 85px;margin-top: 40px;">Meet the team behind TOAD
+            </span>
+          <div class="team-member col-lg-12  col-md-6 col-sm-6 res_md_mb_30 res_sm_mb_20" style="margin-top:100px">
+              <div class="bg_gray4 radius_box team_box_s3 animation animated fadeInUp" data-animation="fadeInUp" data-animation-delay="0.6s" style="animation-delay: 0.6s; opacity: 1; border-radius:15px">
                   <div class="text-center">
                   	<img src="assets/images/toad_guy.png" alt="team2" style="height: 100px;">
                   </div>
@@ -256,7 +190,7 @@ We believe this to be the fairest way to structure a yield farm.
         <div class="title_default_dark title_border text-center">
           <h4 class="animation animated fadeInUp" data-animation="fadeInUp" data-animation-delay="0.2s" style="animation-delay: 0.2s; opacity: 1;"></h4>
           <div class="team-member col-lg-12  col-md-6 col-sm-6 res_md_mb_30 res_sm_mb_20">
-              <div class="bg_gray4 radius_box team_box_s3 animation animated fadeInUp" data-animation="fadeInUp" data-animation-delay="0.6s" style="animation-delay: 0.6s; opacity: 1;">
+              <div class="bg_gray4 radius_box team_box_s3 animation animated fadeInUp" data-animation="fadeInUp" data-animation-delay="0.6s" style="animation-delay: 0.6s; opacity: 1; border-radius:15px">
                   <div class="text-center">
                   	<img src="assets/images/snake.jpg" alt="team2" style="height: 100px;border-radius: 100px;">
                   </div>
@@ -273,7 +207,7 @@ We believe this to be the fairest way to structure a yield farm.
         <div class="title_default_dark title_border text-center">
           <h4 class="animation animated fadeInUp" data-animation="fadeInUp" data-animation-delay="0.2s" style="animation-delay: 0.2s; opacity: 1;"></h4>
           <div class="team-member col-lg-12  col-md-6 col-sm-6 res_md_mb_30 res_sm_mb_20">
-              <div class="bg_gray4 radius_box team_box_s3 animation animated fadeInUp" data-animation="fadeInUp" data-animation-delay="0.6s" style="animation-delay: 0.6s; opacity: 1;">
+              <div class="bg_gray4 radius_box team_box_s3 animation animated fadeInUp" data-animation="fadeInUp" data-animation-delay="0.6s" style="animation-delay: 0.6s; opacity: 1; border-radius:15px">
                   <div class="text-center">
                   	<img src="assets/images/goresttoad.jpg" alt="team2" style="height: 100px;border-radius: 100px;">
                   </div>
@@ -293,26 +227,21 @@ We believe this to be the fairest way to structure a yield farm.
 <!-- START FOOTER SECTION -->
 <footer>
   <div class="bottom_footer" style="padding: 19px 10px 1px;">
-    <div class="container">
+    <div class="container" style="max-width:none; width:98%; margin-left:1%">
       <div class="row" style="display:flow-root">
         <div class="footer_logo mb-3 animation animated fadeInUp" data-animation="fadeInUp" data-animation-delay="0.2s" style="animation-delay: 0.2s;opacity: 1;">
           <a class="navbar-brand page-scroll animation animated fadeInDown" href="#home_section" data-animation="fadeInDown" data-animation-delay="1s" style="float: left;animation-delay: 1s;opacity: 1;margin-top: -5px;">
             <img class="logo_light" src="assets/images/logo.png" alt="logo" style="margin-top: 10px; margin-right: 10px;height: 30px;margin-left:15px;">
           </a>
-          <h5 style="display: inline-block; color: white;font-size: 1.1rem; max-width: 200px; font-weight: 200;">
-            Toad Network
-          </h5>
-           <a class="nav_item col-4 col-xl-3 col-lg-6 col-md-4 col-sm-4 col-xs-4" href="https://toadytoad.medium.com" target="_blank" style="color: white;">
-                          <span style="display: inline-block;"><i class="fab fa-medium animation animated fadeInDown" style="margin-right: 5px;vertical-align: middle;font-size: 45px;animation-delay: 0.2s;opacity: 1;" data-animation="fadeInDown" data-animation-delay="0.2s"></i></span>
-           </a>
-           <a class="nav_item col-4 col-xl-3 col-lg-6 col-md-4 col-sm-4 col-xs-4" href="https://www.instagram.com/toad.network" target="_blank" style="color: white;">
-              <span style="display: inline-block; "><i class="fab fa-instagram-square animation animated fadeInDown" style="margin-right: 5px;vertical-align: middle;font-size: 45px;animation-delay: 0.2s;opacity: 1;" data-animation="fadeInDown" data-animation-delay="0.2s"></i></span>
-           </a>
-           <a class="nav_item col-4 col-xl-3 col-lg-6 col-md-4 col-sm-4 col-xs-4 " href="https://www.twitter.com/ToadNetwork" target="_blank" style="color: white;">
-               <span style="display: inline-block; "><i class="fab fa-twitter-square animation animated fadeInDown" style="margin-right: 5px;vertical-align: middle;font-size: 45px;animation-delay: 0.2s;opacity: 1;" data-animation="fadeInDown" data-animation-delay="0.2s"></i></span>
+            <h5 style="display: inline-block; color: white;font-size: 1.1rem; max-width: 200px; font-weight: 200;">
+                Toad Network
+            </h5>
+          
+           
+           <a style="color:white; float: right;" href="https://t.me/toadnetwork">
+                <i class="fab fa-telegram " style="vertical-align: middle;font-size:33px" data-animation="fadeInDown" data-animation-delay="0.2s"></i>
             </a>
-						
-		  <div class="" style = "display: inline-block; margin-top: 10px;" data-animation="fadeInDown" id="methamask_status_2">
+            <div class="" style = "display: inline-block; margin-top: 7px; float:right; margin-right:15px" data-animation="fadeInDown" id="methamask_status_2">
                 <a class="nav-link nav-btn" href="#" style="
                 text-transform: capitalize;
                 font-weight: 500;
@@ -320,17 +249,26 @@ We believe this to be the fairest way to structure a yield farm.
                 border-radius: 15px;
                 box-shadow: 0 12px 18px rgb(0 0 0 / 5%);
                 background: #fff;
-                padding: 6px 20px;
+                padding: 5px 20px;
                 font-size: 0.8rem;
                 margin-top: 10px;
                 min-width: 200px;">
-                  Approve Metamask
-                  <img src="assets/images/nav-btn-ic.png" alt="" style="
-                  margin-left: 5px;
-                  margin-top: -2px;">
+                Approve Metamask
+                <img src="assets/images/nav-btn-ic.png" alt="" style="
+                margin-left: 5px;
+                margin-top: -2px;">
                 </a>
-              </div>
-		  
+            </div>
+            <a href="https://www.twitter.com/ToadNetwork" target="_blank" style="color:white; float: right; margin-right:15px">
+                <span style="display: inline-block; "><i class="fab fa-twitter-square animation animated fadeInDown" style="vertical-align: middle;font-size: 33px;"></i></span>
+            </a>
+            <a href="https://www.instagram.com/toad.network" target="_blank" style="color:white; float: right; margin-right:15px">
+              <span style="display: inline-block; "><i class="fab fa-instagram-square" style="vertical-align: middle;font-size: 33px;" data-></i></span>
+           </a>
+             <a href="https://toadytoad.medium.com" target="_blank" style="color: white; float:right; margin-right:15px">
+                <span style="display: inline-block;"><i class="fab fa-medium animation animated fadeInDown" style="vertical-align: middle;font-size: 33px;"></i></span>
+           </a>
+                
         </div>
         </div>
     </div>
@@ -515,7 +453,7 @@ async function approveMethamask() {
                   border-radius: 15px;
                   box-shadow: 0 12px 18px rgb(0 0 0 / 5%);
                   background: #dc3545;
-                  padding: 5px 20px;
+                  padding: 10px 20px;
                   font-size: 0.8rem;">
                   <svg width="1.2em" height="1.2em" viewBox="0 0 16 16" class="bi bi-patch-exclamation-fll" fill="currentColor" xmlns="http://www.w3.org/2000/svg" style="
       margin-right: 2px;
@@ -536,7 +474,7 @@ async function approveMethamask() {
                   border-radius: 15px;
                   box-shadow: 0 12px 18px rgb(0 0 0 / 5%);
                   background: #28a745;
-                  padding: 5px 20px;
+                  padding: 10px 20px;
                   font-size: 0.8rem;">
                   <svg width="1.2em" height="1.2em" viewBox="0 0 16 16" class="bi bi-patch-check-fll" fill="currentColor" xmlns="http://www.w3.org/2000/svg style=" margin-right:="" 2px;="" "="" style="font-size: 12px;vertical-align: sub;">
     <path fill-rule="evenodd" d="M10.067.87a2.89 2.89 0 0 0-4.134 0l-.622.638-.89-.011a2.89 2.89 0 0 0-2.924 2.924l.01.89-.636.622a2.89 2.89 0 0 0 0 4.134l.637.622-.011.89a2.89 2.89 0 0 0 2.924 2.924l.89-.01.622.636a2.89 2.89 0 0 0 4.134 0l.622-.637.89.011a2.89 2.89 0 0 0 2.924-2.924l-.01-.89.636-.622a2.89 2.89 0 0 0 0-4.134l-.637-.622.011-.89a2.89 2.89 0 0 0-2.924-2.924l-.89.01-.622-.636zm.287 5.984a.5.5 0 0 0-.708-.708L7 8.793 5.854 7.646a.5.5 0 1 0-.708.708l1.5 1.5a.5.5 0 0 0 .708 0l3-3z" style=""></path>
@@ -553,7 +491,7 @@ async function approveMethamask() {
                 border-radius: 15px;
                 box-shadow: 0 12px 18px rgb(0 0 0 / 5%);
                 background: #dc3545;
-                padding: 6px 20px;
+                padding: 5px 20px;
                 font-size: 0.8rem;
                 margin-top: -10px;
                 min-width: 200px;">
@@ -576,7 +514,7 @@ async function approveMethamask() {
                 border-radius: 15px;
                 box-shadow: 0 12px 18px rgb(0 0 0 / 5%);
                 background: #28a745;
-                padding: 6px 20px;
+                padding: 5px 20px;
                 font-size: 0.8rem;
                 margin-top: -10px;
                 min-width: 200px;">
@@ -598,7 +536,7 @@ async function approveMethamask() {
           document.getElementById('methamask_status_2').innerHTML = success_methamask_html2
           enabled = true
           return
-      } catch (error) {
+      } catch (error) {  document.getElementById('price2').innerHTML= '$'+roundToTwo(toadPrice)
         console.log(error)
           // User denied account access...
           document.getElementById('methamask_status').innerHTML = failed_methamask_html1
@@ -660,8 +598,7 @@ async function getPriceWithoutMetaMask() {
   dataseed = new Web3(rpc)
   await getToadInstance()
   await getPrice()
-  await getLiquidity()
-  await getCircSupply()
+
 }
 
 async function getToadInstance() {
@@ -693,32 +630,7 @@ const accountInterval1 = setInterval(async function() {
 }, 2000) //executed every 3000ms(3 seconds)
 setInterval(async function(){
   await getPrice()
-  await getCircSupply()
-  await getLiquidity()
-  setTimeout(async function(){
-    await getStakedAmount(1)
-    await getDividends(1)
-    await getBalance(1)
-    await checkAllowance(1)
-    await getROI1(1)
-    await getPoolInfo(1)
-  },1500)
-  setTimeout(async function(){
-    await getStakedAmount(2)
-    await getDividends(2)
-    await getBalance(2)
-    await checkAllowance(2)
-    await getROI2(2)
-    await getPoolInfo(2)
-  },3000)
-  setTimeout(async function(){
-    await getStakedAmount(3)
-    await getDividends(3)
-    await getBalance(3)
-    await checkAllowance(3)
-    await getROI3(3)
-    await getPoolInfo(3)
-  },5000)
+  
 },5000)
 
 async function getStakedAmount(num){
@@ -744,8 +656,7 @@ async function getPrice() {
   let toadBusdBUSDBalance = await BUSDinstance.methods.balanceOf('0x15aff98391f928693f55b70b8f4d787031ad6f74').call()
   let toadBusdToadBalance = await SeedToadInstance.methods.balanceOf('0x15aff98391f928693f55b70b8f4d787031ad6f74').call()
   toadPrice = toadBusdBUSDBalance/toadBusdToadBalance
-  document.getElementById('price1').innerHTML= '$'+roundToTwo(toadPrice)
-  document.getElementById('price2').innerHTML= '$'+roundToTwo(toadPrice)
+  document.getElementById('price').innerHTML= '$'+roundToTwo(toadPrice)
   document.getElementById('page-title').innerHTML= 'Toad Network - $'+roundToTwo(toadPrice)
 }
 
