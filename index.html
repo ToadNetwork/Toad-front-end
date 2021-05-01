@@ -341,12 +341,12 @@ We believe this to be the fairest way to structure a yield farm.
                   <span style="margin-top: 5px;display: block;font-size: 15px;font-weight: normal;color: #b9b5b4;">Toad Earned</span>
                   </h4>
                   <h5 class = "topStakePadding">
-                  <img src="assets/images/logo-small.png" alt="">
+                  <img src="assets/images/bnb.png" style="height:23px" alt="">
                   TOAD-BNB Balance
                   <span id="tokenBalance1" style="color: #5a5a5a;font-weight: bold;float: right;padding: 0 0;">0.000</span>
                   </h5>
                   <h5 class = "stakePadding">
-                  <img src="assets/images/logo-small.png" alt="">
+                  <img src="assets/images/bnb.png" style="height:23px" alt="">
                   Your Stake
                   <span id="stakedBalance1" style="color: #5a5a5a;font-weight: bold;float: right;padding: 0 0;">0.000</span>
                   </h5>
@@ -420,12 +420,12 @@ We believe this to be the fairest way to structure a yield farm.
                   <span style="margin-top: 5px;display: block;font-size: 15px;font-weight: normal;color: #b9b5b4;">Toad Earned</span>
                   </h4>
                   <h5 style="padding: 0 0 15px;margin: 0 0 15px;border-bottom: 1px solid #f0f0f0;font-size: 15px;font-weight: 500;color: #a3a09f;display: block;margin-top: 35px;text-align: left;">
-                  <img src="assets/images/logo-small.png" alt="">
+                  <img src="assets/images/busd.png" style="height:23px" alt="">
                   TOAD-BUSD Balance
                   <span id="tokenBalance3" style="color: #5a5a5a;font-weight: bold;float: right;padding: 0 0;">0.000</span>
                 </h5>
                   <h5 style="padding: 0 0 15px;margin: 0 0 15px;border-bottom: 1px solid #f0f0f0;font-size: 15px;font-weight: 500;color: #a3a09f;display: block;text-align: left;">
-                  <img src="assets/images/logo-small.png" alt="">
+                  <img src="assets/images/busd.png" style="height:23px" alt="">
                   Your Stake
                   <span id="stakedBalance3" style="color: #5a5a5a;font-weight: bold;float: right;padding: 0 0;">0.000</span>
                 </h5>
@@ -1176,7 +1176,7 @@ async function getLiquidity() {
     bnbLiq = bnbLiq*2/1e18*toadPrice
     let busdLiq = await SeedToadInstance.methods.balanceOf('0x15aff98391f928693F55b70b8F4D787031Ad6f74').call()
     busdLiq = busdLiq*2/1e18*toadPrice
-    document.getElementById('liquidity').innerHTML = ''+roundToTwo((Number(bnbLiq)+Number(busdLiq))/1000)+'K'
+    document.getElementById('liquidity').innerHTML = ''+miOrK((Number(bnbLiq)+Number(busdLiq)))
 }
 
 async function getROI1(num){
