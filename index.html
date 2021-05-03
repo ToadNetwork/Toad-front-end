@@ -366,7 +366,7 @@ We believe this to be the fairest way to structure a yield farm.
                       <span id="max1" style="padding: 3px;cursor: pointer;background: #4d4df1;margin-right: 5px;position: absolute;font-size: 10px;line-height: 10px;color: white;margin-bottom: 10px;border-radius: 6px;" onclick="maxAmount(1)">
                         max
                       </span>
-                    </div><a class="btn btn-default btn-radius animation animated fadeInUp" onclick="unstake(1)" style="font-size: 14px;height: 40px;line-height: 40px;padding: 0px 25px;margin-left: 10px;margin-right: 0px;color: white;opacity: 1;">Unstake</a>
+                    </div><a class="unstake_btn btn btn-default btn-radius animation animated fadeInUp" onclick="unstake(1)" style="font-size: 14px;height: 40px;line-height: 40px;padding: 0px 25px;margin-left: 10px;margin-right: 0px;color: white;opacity: 1;">Unstake</a>
                   </div>
                   <a class="btn btn-default btn-radius animation animated fadeInUp" onclick="withdraw(1)" style="height: 40px;line-height: 40px;font-size: 14px;color: white;width: 100%;opacity: 1;">Withdraw</a>
                   <a class="btn btn-default btn-radius animation animated fadeInUp content-popup" href="#info-toad-bnb" style="margin-left: 0px; margin-top:10px; height: 40px;line-height: 40px;font-size: 14px;color: white;width: 100%;opacity: 1; background-image: linear-gradient(to right, rgb(66, 65, 184) 0%, rgb(117 117 228) 51%, rgb(218 97 197));">More Info</a>
@@ -404,7 +404,7 @@ We believe this to be the fairest way to structure a yield farm.
                     <a class="btn btn-default btn-radius animation animated fadeInUp" id="approve_or_buy2" onclick="approve(2)" style="font-size: 14px;height: 40px;line-height: 40px;padding: 0px 25px;margin-left: 0px;margin-right: 10px;color: white;opacity: 1;">Approve</a>
                     <div style="align-items: flex-end;display: flex;flex-direction: column-reverse;">
                     <input type="text" name="" id="tokenAmount2" class="form-control" style="border-radius: 15px;max-width:200px;padding-right: 35px;"><span id="max2" style="padding: 3px;cursor: pointer;background: #4d4df1;margin-right: 5px;position: absolute;font-size: 10px;line-height: 10px;color: white;margin-bottom: 10px;border-radius: 6px;"onclick="maxAmount(2)">max</span></div>
-                    <a class="btn btn-default btn-radius animation animated fadeInUp" onclick="unstake(2)" style="font-size: 14px;height: 40px;line-height: 40px;padding: 0px 25px;margin-left: 10px;margin-right: 0px;color: white;opacity: 1;">Unstake</a>
+                    <a class="unstake_btn btn btn-default btn-radius animation animated fadeInUp" onclick="unstake(2)" style="font-size: 14px;height: 40px;line-height: 40px;padding: 0px 25px;margin-left: 10px;margin-right: 0px;color: white;opacity: 1;">Unstake</a>
                   </div>
                 <a class="btn btn-default btn-radius animation animated fadeInUp" onclick="withdraw(2)" style="height: 40px;line-height: 40px;font-size: 14px;color: white;width: 100%;opacity: 1;">Withdraw</a>
                 <a class="btn btn-default btn-radius animation animated fadeInUp" onclick="reinvest(2)" style="margin-left: 0px;margin-top: 15px;height: 40px;line-height: 40px;font-size: 14px;color: white;width: 100%;opacity: 1;">Reinvest</a>
@@ -442,7 +442,7 @@ We believe this to be the fairest way to structure a yield farm.
                 <div class="pool_stake_unstake" style="display: flex;align-items: center;margin-bottom: 20px;justify-content: space-between;padding-top: 16px;">
                     <a class="btn btn-default btn-radius animation animated fadeInUp" id="approve_or_buy3" onclick="approve(3)" style="font-size: 14px;height: 40px;line-height: 40px;padding: 0px 25px;margin-left: 0px;margin-right: 10px;color: white;opacity: 1;">Approve</a>
                     <div style="align-items: flex-end;display: flex;flex-direction: column-reverse;"><input type="text" name="" id="tokenAmount3" class="form-control" style="border-radius: 15px;max-width:200px;padding-right: 35px;"><span id="max3" style="padding: 3px;cursor: pointer;background: #4d4df1;margin-right: 5px;position: absolute;font-size: 10px;line-height: 10px;color: white;margin-bottom: 10px;border-radius: 6px;" onclick="maxAmount(3)">max</span></div>
-                    <a class="btn btn-default btn-radius animation animated fadeInUp" onclick="unstake(3)" style="font-size: 14px;height: 40px;line-height: 40px;padding: 0px 25px;margin-left: 10px;margin-right: 0px;color: white;opacity: 1;">Unstake</a>
+                    <a class="unstake_btn btn btn-default btn-radius animation animated fadeInUp" onclick="unstake(3)" style="font-size: 14px;height: 40px;line-height: 40px;padding: 0px 25px;margin-left: 10px;margin-right: 0px;color: white;opacity: 1;">Unstake</a>
                 </div>
                 <a class="btn btn-default btn-radius animation animated fadeInUp" onclick="withdraw(3)" style="height: 40px;line-height: 40px;font-size: 14px;color: white;width: 100%;opacity: 1;">Withdraw</a>
                   <a class="btn btn-default btn-radius animation animated fadeInUp content-popup" href="#info-toad-bnb" style="margin-left: 0px; margin-top:10px; height: 40px;line-height: 40px;font-size: 14px;color: white;width: 100%;opacity: 1; background-image: linear-gradient(to right, rgb(66, 65, 184) 0%, rgb(117 117 228) 51%, rgb(218 97 197));">More Info</a>
@@ -770,47 +770,98 @@ We believe this to be the fairest way to structure a yield farm.
 
 @media only screen and (max-width: 992px){
   #tokenAmount1{
-    max-width: 255px !important;
+    max-width: 1000px !important;
   }
   #tokenAmount2{
-    max-width: 255px !important;
+    max-width: 1000px !important;
   }
   #tokenAmount3{
-    max-width: 255px !important;
+    max-width: 1000px !important;
   }
 }
 
 @media only screen and (max-width: 768px){
   #tokenAmount1{
-    max-width: 255px !important;
+    max-width: 1000px !important;
   }
   #tokenAmount2{
-    max-width: 255px !important;
+    max-width: 1000px !important;
   }
   #tokenAmount3{
-    max-width: 255px !important;
+    max-width: 1000px !important;
   }
 }
 @media only screen and (max-width: 500px){
   #tokenAmount1{
-    max-width: 255px !important;
+    max-width: 1000px !important;
   }
   #tokenAmount2{
-    max-width: 255px !important;
+    max-width: 1000px !important;
   }
   #tokenAmount3{
-    max-width: 255px !important;
+    max-width: 1000px !important;
+  }
+  .pool_stake_unstake{
+	flex-direction: column;
+  }
+  
+  #approve_or_buy1{
+	margin-bottom: 0.5em !IMPORTANT;
+	margin-right: 0px !IMPORTANT;
+	width: 100% !IMPORTANT;
+  }
+  #approve_or_buy2{
+	margin-bottom: 0.5em !IMPORTANT;
+	margin-right: 0px !IMPORTANT;
+	width: 100% !IMPORTANT;
+  }
+  #approve_or_buy3{
+	margin-bottom: 0.5em !IMPORTANT;
+	margin-right: 0px !IMPORTANT;
+	width: 100% !IMPORTANT;
+  }
+  
+  .unstake_btn{
+	margin-left: 0px !IMPORTANT;
+	margin-top: 0.5em !IMPORTANT;
+	width: 100% !IMPORTANT;
   }
 }
 @media only screen and (max-width: 360px){
   #tokenAmount1{
-    max-width: 255px !important;
+    max-width: 1000px !important;
   }
   #tokenAmount2{
-    max-width: 255px !important;
+    max-width: 1000px !important;
   }
   #tokenAmount3{
-    max-width: 255px !important;
+    max-width: 1000px !important;
+  }
+  
+  .pool_stake_unstake{
+	flex-direction: column;
+  }
+  
+   #approve_or_buy1{
+	margin-bottom: 0.5em !IMPORTANT;
+	margin-right: 0px !IMPORTANT;
+	width: 100% !IMPORTANT;
+  }
+  #approve_or_buy2{
+	margin-bottom: 0.5em !IMPORTANT;
+	margin-right: 0px !IMPORTANT;
+	width: 100% !IMPORTANT;
+  }
+  #approve_or_buy3{
+	margin-bottom: 0.5em !IMPORTANT;
+	margin-right: 0px !IMPORTANT;
+	width: 100% !IMPORTANT;
+  }
+  
+  .unstake_btn{
+	margin-left: 0px !IMPORTANT;
+	margin-top: 0.5em !IMPORTANT;
+	width: 100% !IMPORTANT;
   }
 }
 @media only screen and (max-width: 480px){
