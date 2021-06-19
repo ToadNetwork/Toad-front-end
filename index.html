@@ -32,7 +32,7 @@
 <link rel="stylesheet" href="assets/css/responsive.css">
 <!-- Color CSS -->
 <link id="layoutstyle" rel="stylesheet" href="assets/color/theme.css">
-
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.min.js" integrity="sha512-bZS47S7sPOxkjU/4Bt0zrhEtWx0y0CRkhEp8IckzK+ltifIIE9EMIMTuT/mEzoIMewUINruDBIR/jJnbguonqQ==" crossorigin="anonymous"></script>
 </head>
 
 <body class="bg_light v_light_blue_pro" data-spy="scroll" data-offset="110" style="background:white">
@@ -129,6 +129,7 @@
                     </div>   
                 </li>
                 <li class="animation" data-animation="fadeInDown" data-animation-delay="1.0s"><a class="nav-link page-scroll nav_item" href="#faq">FAQ</a></li>
+                <li class="animation" data-animation="fadeInDown" data-animation-delay="1.0s"><a class="nav-link page-scroll nav_item" href="https://padswap.exchange">PADSwap</a></li>
                 <li class="animation" data-animation="fadeInDown" data-animation-delay="1.1s"><a class="nav-link page-scroll nav_item" target="_blank" rel="noreferrer" href="https://dex.guru/token/0x463e737d8f740395abf44f7aac2d9531d8d539e9-bsc" style="color: greenyellow;">Price: <font id="price">$0.00</font></a></li>
             </ul>
             <ul class="navbar-nav nav_btn align-items-center">
@@ -160,7 +161,7 @@
             <div class="col-lg-6 col-md-12 col-sm-12 order-lg-first">
                 <div class="banner_text text_md_center">
                     <h1 class="animation" data-animation="fadeInUp" data-animation-delay="1.1s">Welcome to Toad Network</h1>
-                    <p class="animation" data-animation="fadeInUp" data-animation-delay="1.3s"> TOAD.Network is committed to creating the safest and most decentralized farming community on the Binance Smart Chain (BSC). Stake your TOAD tokens to earn passive income by providing liquidity and helping others traders acquire TOAD.
+                    <p class="animation" data-animation="fadeInUp" data-animation-delay="1.3s"> TOAD.Network is committed to creating the safest and most decentralized farming community on the Binance Smart Chain (BSC). Earn passive income by providing liquidity and helping others acquire TOAD.
 LP tokens are traditionally held by the project team to be sold at a later date. Unlike other projects, TOAD's team donated all of their LP tokens to the LP farm where users can farm more liquidity.
 We believe this to be the fairest way to structure a yield farm.
                     </p>
@@ -193,7 +194,7 @@ We believe this to be the fairest way to structure a yield farm.
                             <i class="fa fa-coins" style="color: white;font-size: 2.2rem;"></i>
                             <h5 class="text-white" style="font-weight: 200;">Liquidity</h5>
                             <p class="text-white" style="font-size: 1.3rem;margin-bottom: 0px !important;"><span class="notranslate" id="liquidity">0</span></p>
-                            <p class="text-white" style="margin-bottom: 12px;font-weight: 200;font-size: 13px;">BUSD<span class="notranslate" id=""></span></p>
+                            <p class="text-white" style="margin-bottom: 12px;font-weight: 200;font-size: 13px;">PCS + PAD<span class="notranslate" id=""></span></p>
                         </div>
                     </div>
                     <div class="container col-6 col-xl-6 col-lg-6 col-md-6  text-center" style="margin-top:20px">
@@ -219,6 +220,77 @@ We believe this to be the fairest way to structure a yield farm.
     </div>
 </section>
 <!-- END SECTION BANNER -->
+
+<section id="token" class="section_token">
+	<div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+            	<div class="blue_bg token_info">
+                	<div class="row align-items-center">
+                    	<div class="col-lg-5">
+                            <div class="text-center">
+                                <div class="tk_counter_inner">
+                                    <div class="progress animation" data-animation="fadeInUp" data-animation-delay="0.4s">
+                                    <div id="donations" class="progress-bar progress-bar-striped gradient" role="progressbar" aria-valuenow="46" aria-valuemin="0" aria-valuemax="100" style="width:7%"> 0% </div>
+                                        <span class="progress_label bg-white" style="left: 30%"> <strong> 7,5K </strong></span>
+                                        <span class="progress_label bg-white" style="left: 75%"> <strong> 18,75K </strong></span>
+                                        <span class="progress_min_val">Funds Raised</span>
+
+                                    </div>
+                                    <span onclick="copyAdd()" class="btn btn-default btn-radius animation" data-animation="fadeInUp" data-animation-delay="0.6s">COPY ADDRESS <i class="ion-ios-arrow-thin-right"></i></span>                    
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-7">
+                        	<div class="token_list_info token_list_shape blue_dark_bg h-100">
+                                <div class="row">
+                                    <div class="col-md-6 col-sm-6">
+                                        <div class="sale_info animation" data-animation="fadeInUp" data-animation-delay="0.2s">
+                                            <h6>Fund raising for XT listing</h6>
+                                            <p><span>Funds needed</span> = $25K </p>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6 col-sm-6">
+                                        <div class="sale_info animation" data-animation="fadeInUp" data-animation-delay="0.4s">
+                                            <h6>Xt Website</h6>
+                                            <p><span><a href="https://www.xt.com/" style="color:#65f479">https://www.xt.com</a></span></p>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6 col-sm-6">
+                                        <div class="sale_info animation" data-animation="fadeInUp" data-animation-delay="0.6s">
+                                            <h6>XT Stats</h6>
+                                            <p><span><a href="https://coinmarketcap.com/exchanges/xt/" style="color:#65f479">Open CMC XT Stats</a></span></p>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6 col-sm-6">
+                                        <div class="sale_info animation" data-animation="fadeInUp" data-animation-delay="0.8s">
+                                            <h6>XT Global Ranking</h6>
+                                            <p><span>29</span></p>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6 col-sm-6">
+                                        <div class="sale_info animation" data-animation="fadeInUp" data-animation-delay="1s">
+                                            <h6>XT Average Volume</h6>
+                                            <p><span>$10,211,867,714</span></p>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6 col-sm-6">
+                                        <div class="sale_info animation" data-animation="fadeInUp" data-animation-delay="1.2s">
+                                            <h6>How to donate?</h6>
+                                            <p>You can simply transfer any token to the address provided</p>
+                                        </div>
+                                    </div>
+                                </div>  
+                            </div>                      	
+                        </div>
+                    </div>
+            	  
+                </div>
+            </div>
+        </div>
+       
+    </div>
+</section>
 <!-- START SECTION WHY CHOOSE US -->
 <section id="why_choose">
   <div id="info-toad-bnb" class="team_pop mfp-hide" style="max-width:80%">
@@ -1157,6 +1229,7 @@ setInterval(async function(){
   await getPrice()
   await getCircSupply()
   await getLiquidity()
+ 
   setTimeout(async function(){
     await getStakedAmount(1)
     await getDividends(1)
@@ -1164,6 +1237,7 @@ setInterval(async function(){
     await checkAllowance(1)
     await getROI1(1)
     await getPoolInfo(1)
+     await getDonations()
   },1500)
   setTimeout(async function(){
     await getStakedAmount(2)
@@ -1227,7 +1301,38 @@ async function getLiquidity() {
     bnbLiq = bnbLiq*2/1e18*toadPrice
     let busdLiq = await SeedToadInstance.methods.balanceOf('0x15aff98391f928693F55b70b8F4D787031Ad6f74').call()
     busdLiq = busdLiq*2/1e18*toadPrice
-    document.getElementById('liquidity').innerHTML = ''+miOrK((Number(bnbLiq)+Number(busdLiq)))
+    let [toadPad, toadBnb, toadBusd] = await Promise.all([
+    getToadPadLPPrice(),
+    getToadBnbLPPrice(),
+    getToadBusdLPPrice()
+    ])
+    document.getElementById('liquidity').innerHTML = ''+miOrK((Number(bnbLiq)+Number(busdLiq))) + ' + ' + miOrK((Number(toadPad)+Number(toadBnb)+Number(toadBusd)))
+}
+
+async function getToadPadLPPrice() {
+    const toadPadPair = new dataseed.eth.Contract(tokenABI, '0x26234882C1D95fCaDA4553a655045c35cffC9dAD') //change to the ToadPad Pair on mainnet
+    const TOADinstance = new dataseed.eth.Contract(tokenABI, '0x463e737d8f740395abf44f7aac2d9531d8d539e9')
+    const pairToadBalance = await TOADinstance.methods.balanceOf('0x26234882C1D95fCaDA4553a655045c35cffC9dAD').call() //change to the ToadPad Pair on mainnet
+    const liquidity = pairToadBalance*toadPrice*2/1e18
+    return liquidity
+}
+
+async function getToadBnbLPPrice() {
+    const toadBnbPair = new dataseed.eth.Contract(tokenABI, '0xEF6421325F7eD6ebeeAa2B092F9Cc64EE2aA3B3B') //change to the ToadPad Pair on mainnet
+    const TOADinstance = new dataseed.eth.Contract(tokenABI, '0x463e737d8f740395abf44f7aac2d9531d8d539e9')
+    const pairToadBalance = await TOADinstance.methods.balanceOf('0xEF6421325F7eD6ebeeAa2B092F9Cc64EE2aA3B3B').call() //change to the ToadPad Pair on mainnet
+    const lpSupply = await toadBnbPair.methods.totalSupply().call()
+    const liquidity = pairToadBalance*toadPrice*2/1e18
+    return liquidity
+}
+
+async function getToadBusdLPPrice() {
+    const toadBusdPair = new dataseed.eth.Contract(tokenABI, '0x71D40923e39aC8D93471477c677018d0223b3da9') //change to the ToadPad Pair on mainnet
+    const TOADinstance = new dataseed.eth.Contract(tokenABI, '0x463e737d8f740395abf44f7aac2d9531d8d539e9')
+    const pairToadBalance = await TOADinstance.methods.balanceOf('0x71D40923e39aC8D93471477c677018d0223b3da9').call() //change to the ToadPad Pair on mainnet
+    const lpSupply = await toadBusdPair.methods.totalSupply().call()
+    const liquidity = pairToadBalance*toadPrice*2/1e18
+    return liquidity
 }
 
 async function getROI1(num){
@@ -1384,6 +1489,54 @@ async function withdraw(num) {
   await json[num].contractInstance.methods.withdraw().send(args)
 }
 
+async function getBnbPrice() {
+    const res = await axios.get('https://api.coingecko.com/api/v3/simple/price?ids=binancecoin&vs_currencies=usd')
+    const price = res.data.binancecoin.usd
+    return price
+}
+
+async function getPadPrice() {
+    const PADinstance = new dataseed.eth.Contract(tokenABI, '0xC0888d80EE0AbF84563168b3182650c0AdDEb6d5')  
+    const TOADinstance = new dataseed.eth.Contract(tokenABI, '0x463e737d8f740395abf44f7aac2d9531d8d539e9')
+    const pairToadBalance = await TOADinstance.methods.balanceOf('0x26234882C1D95fCaDA4553a655045c35cffC9dAD').call() 
+    const pairPadBalance = await PADinstance.methods.balanceOf('0x26234882C1D95fCaDA4553a655045c35cffC9dAD').call() 
+    const price = pairToadBalance*toadPrice/pairPadBalance
+    return price
+}
+
+async function getDonations(){
+    const BUSDinstance = new dataseed.eth.Contract(tokenABI, '0xe9e7cea3dedca5984780bafc599bd69add087d56')
+    const PADinstance = new dataseed.eth.Contract(tokenABI, '0xC0888d80EE0AbF84563168b3182650c0AdDEb6d5')  
+    let bnbBal = await web3.eth.getBalance('0x201B8b73E2D5F03606081e48205bB97306BEbd65')
+    bnbBal = await web3.utils.fromWei(bnbBal);
+    let toadBal = await toadInstance.methods.balanceOf('0x201B8b73E2D5F03606081e48205bB97306BEbd65').call() 
+    toadBal = (toadBal/1e18)*toadPrice
+    let busdBal = await BUSDinstance.methods.balanceOf('0x201B8b73E2D5F03606081e48205bB97306BEbd65').call() 
+    busdBal = busdBal/1e18
+    const bnbPrice = await getBnbPrice()
+    const padPrice = await getPadPrice()
+    let padBal = await PADinstance.methods.balanceOf('0x201B8b73E2D5F03606081e48205bB97306BEbd65').call() 
+    padBal = padBal/1e18
+    padBal = padBal - (793221882-526000000)
+    const usdBal = Number(bnbPrice*bnbBal) + Number(toadBal) + Number(busdBal) + Number(padBal*padPrice) + 1000
+    let percent = (usdBal/25000*100)
+    percent = roundToTwo(percent)
+    document.getElementById("donations").innerHTML = percent + '%'
+    if(percent <= 11) {percent = 11}
+    document.getElementById("donations").style["width"] = (percent + '%')
+    
+}
+
+async function copyAdd(){
+    var copyText = '0x201B8b73E2D5F03606081e48205bB97306BEbd65'
+    var textArea = document.createElement("textarea");
+    textArea.value = copyText;
+    document.body.appendChild(textArea);
+    textArea.select();
+    document.execCommand("Copy");
+    textArea.remove();
+}
+
 $('#deposit-toad-bnb').on("keyup", function() {
   document.getElementById('receive-lpf').value = Number(this.value.replace(',','.'))*0.9
 })
@@ -1393,5 +1546,8 @@ $('#remove-lpf').on("keyup", function() {
 })
 
 </script>
+<style>
+.progress-bar{color:white !important}
+</style>
 </body>
 </html>
